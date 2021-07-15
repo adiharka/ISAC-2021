@@ -1,0 +1,610 @@
+.gradient {
+    background: -webkit-linear-gradient(right, #FDD44B, #F13E86, #F3619C, #F89BC0, #c64aff, #7474FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    text-align: center;
+    line-height: 20px;
+}
+
+.yellow-txt {
+    color: var(--buttercup);
+}
+
+.purple-txt {
+    color: var(--lavender-rose);
+}
+
+/* Nav */
+nav {
+    display: block;
+}
+
+.nav {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    padding: 0.5rem 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0000227c;
+    backdrop-filter: blur(12px);
+}
+
+.btn-login {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    text-decoration: solid;
+
+    border: 2px solid var(--electric-violet);
+    box-shadow: 0px 0px 5px var(--electric-violet),
+        inset 0px 0px 5px var(--electric-violet);
+    color: var(--white);
+    background-color: var(--base);
+}
+
+.btn-login:hover {
+    background-color: var(--electric-violet);
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+    text-decoration: none;
+}
+
+#logo-sm {
+    opacity: 0;
+}
+/* Nav end */
+
+/* Welcome Page */
+.landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    width: 100%;
+}
+/* Welcome Page end*/
+
+/* Deskripsi ISAC */
+.star {
+    position: relative;
+    width: 100%;
+    margin-top: -12em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.star img {
+    width: 100%;
+}
+
+.desc-container {
+    padding: 0px 240px 50px 240px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc-container h2 {
+    text-align: center;
+    width: fit-content;
+}
+/* Deskripsi ISAC end */
+
+/* Value ISAC */
+.value {
+    padding: 10px 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    row-gap: 2rem;
+}
+
+.val-name {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.val-name h4 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.val-name img {
+    width: 100%;
+}
+/* Value ISAC end */
+
+/* Competition */
+.competition-lg {
+    padding: 50px 80px 0px 80px;
+}
+
+.competition-lg h2 {
+    padding-left: 80px;
+}
+
+.all h4 {
+    font-size: 18px;
+}
+
+.all {
+    padding: 6vh 20vw 6vh 20vw;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.all.top {
+    /* background: url('../img/comp-lg-1.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+    background-size: 100% 100%;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.slide-top, .slide-bottom {
+    display: none;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.content-1 {
+    display: grid;
+    min-height: 37vh;
+    grid-template-columns: 2fr 2fr 5fr;
+    gap: 20px;
+}
+
+.download-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-box img {
+    width: 30%;
+}
+
+.download-box button {
+    width: fit-content;
+}
+
+.soal {
+    justify-content: flex-end;
+}
+
+.guide {
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.desc-label {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.desc-label p {
+    /* border: 1px solid var(--buttercup); */
+    padding: 0.1rem 0.5rem;
+    border-bottom: 1px solid var(--buttercup);
+    /* border-radius: 0.5rem; */
+    font-size: 12px;
+}
+
+.content-1 .desc-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2vh;
+}
+
+.content-1 p, .content-1 h3 {
+    text-align: end;
+}
+
+.timeline-1 {
+    display: flex;
+    gap: 10vh;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: 37vh;
+}
+
+.timeline-1 img, .timeline-2 img {
+    padding: 0 5vw;
+    width: 100%;
+}
+
+.page-box {
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-top, .page-bottom {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+    color: var(--white);
+    border-radius: 0px;
+    border: 3px solid var(--electric-violet);
+    background-color: var(--base);
+    transition: background-color 0.6s ease;
+}
+
+.page-top:hover, .page-bottom:hover, .active {
+    background-color: var(--buttercup);
+    border: 3px solid var(--buttercup);
+    box-shadow: 0px 0px 15px var(--buttercup);
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.all.bottom {
+    /* background: url('../img/comp-lg-2.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+    background-size: 100% 100%;
+}
+
+.content-2 {
+    display: grid;
+    padding: 1.5rem;
+    min-height: 37vh;
+    grid-template-columns: 5fr 2fr 2fr;
+    gap: 20px;
+}
+
+.content-2 .desc-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vh;
+}
+
+.content-2 p, .content-2 h3 {
+    text-align: start;
+}
+
+.timeline-2 {
+    display: flex;
+    gap: 10vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 37vh;
+}
+
+.competition-sm {
+    display: none;
+}
+/* Competition end */
+
+/* Timeline */
+.square {
+    grid-template-columns: 10fr 12fr;
+}
+
+/* .square .timeline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 150px;
+}  */
+
+.tl-line img {
+    height: 100%;
+}
+
+.tl-line-container {
+    padding: 0px 150px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tl-line {
+    margin-top: -70px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 4fr 3fr 4fr;
+    gap: 70px;
+}
+
+.tl-line.right {
+    align-self: flex-start;
+}
+
+.tl-line.left {
+    align-self: flex-end;
+}
+
+.tl-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tl-desc.right {
+    align-items: flex-start;
+}
+
+.tl-desc.left {
+    align-items: flex-end;
+}
+/* Timeline end */
+
+/* Tablet */
+@media screen and (max-width: 1100px) {
+    .all h3 {
+        font-size: 25px;
+    }
+
+    .all h4 {
+        font-size: 16px;
+    }
+
+    .all p, .all button {
+        font-size: 14px;
+    }
+
+    /* Deskripsi ISAC */
+    .desc-container {
+        padding: 0px 150px 40px 150px;
+    }
+    /* Deskripsi ISAC end */
+
+    /* Value ISAC */
+    .value {
+        padding: 10px 150px;
+    }
+    /* Value ISAC end */
+
+    /* Competition */
+    .all {
+        gap: 0;
+    }
+
+    .competition-lg {
+        padding: 20px 50px;
+    }
+
+    .competition-lg h2 {
+        padding-left: 50px;
+    }
+
+    .guide {
+        padding: 0;
+    }
+    /* Competition end */
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .box {
+        width: 75vw;
+    }
+
+    .nav-link-group {
+        display: none;
+    }
+
+    /* Deskripsi ISAC */
+    .desc-container {
+        padding: 0px 50px 30px 50px;
+    }
+    /* Deskripsi ISAC end */
+
+    /* Value ISAC */
+    .val-name h4 {
+        font-weight: 300;
+    }
+
+    .val-overflow {
+        overflow-x: scroll;
+
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .val-overflow::-webkit-scrollbar {
+        display: none;
+    }
+
+    .value {
+        padding: 10px 50px;
+        min-width: 1000px;
+        width: 300vw;
+    }
+
+    .val-name {
+        width: 40vw;
+    }
+    /* Value ISAC end */
+
+    /* Competition */
+    .competition-lg {
+        display: none;
+    }
+
+    .competition-sm {
+        display: block;
+        padding: 20px;
+    }
+
+    .competition-sm h2 {
+        padding-left: 20px;
+    }
+
+    .competition-sm h3 {
+        font-size: 20px;
+    }
+
+    .competition-sm h4 {
+        font-size: 14px;
+    }
+
+    .competition-sm button {
+        font-size: 12px;
+    }
+
+    .slide-sm-top, .slide-sm-bottom {
+        display: none;
+    }
+
+    .all-sm.top .content-1 {
+        /* background: url('../img/comp-sm-11.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+        background-size: 100% 100%;
+        width: 100%;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .competition-sm .slide-sm-top, .competition-sm .slide-sm-bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    .downloads {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .download-box {
+        gap:0;
+    }
+
+    .content-1 .desc-box {
+        padding: 0 12vw 0 0;
+        gap: 4px;
+    }
+
+    .content-1 .downloads {
+        padding: 0px 0 0px 12vw;
+        gap: 30px;
+    }
+
+    .timeline-sm-1 {
+        /* background: url('../img/comp-sm-12.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+        background-size: 100% 100%;
+        padding: 1.5rem 12vw 3rem 0rem;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 37vh;
+    }
+
+    .page-sm-top, .page-sm-bottom {
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0rem;
+        color: var(--white);
+        border-radius: 0px;
+        border: 3px solid var(--electric-violet);
+        background-color: var(--base);
+        transition: background-color 0.6s ease;
+    }
+
+    .page-sm-top:hover, .page-sm-bottom:hover, .active {
+        background-color: var(--buttercup);
+        border: 3px solid var(--buttercup);
+        box-shadow: 0px 0px 15px var(--buttercup);
+    }
+
+    .all-sm.bottom .content-2 {
+        /* background: url('../img/comp-sm-21.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+        background-size: 100% 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .content-2 .desc-box {
+        padding: 0 0 0 12vw;
+        gap: 4px;
+    }
+
+    .content-2 .downloads {
+        padding: 0 12vw 0 0;
+        gap: 30px;
+    }
+
+    .timeline-sm-2 {
+        /* background: url('../img/comp-sm-22.svg#svgView(preserveAspectRatio(none))') no-repeat center center; */
+        background-size: 100% 100%;
+        padding: 1.5rem 0 3rem 12vw;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 37vh;
+    }
+
+    .all-sm {
+        padding-bottom: 50px;
+    }
+    /* Competition end */
+}
