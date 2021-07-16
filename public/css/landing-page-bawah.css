@@ -3,324 +3,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-p {
-    text-align: center;
-    line-height: 20px;
-}
-
-/* Nav */
-nav {
-    display: block;
-}
-
-.nav {
-    z-index: 2;
-    position: fixed;
-    width: 100%;
-    height: 55px;
-    padding: 0.5rem 1rem;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    list-style: none;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--base);
-}
-
-.btn-login {
-    width: fit-content;
-    padding: 10px 15px;
-    text-decoration: solid;
-    
-    border: 2px solid var(--electric-violet);
-    box-shadow: 0px 0px 5px var(--electric-violet), 
-        inset 0px 0px 5px var(--electric-violet);
-    color: var(--white);
-    background-color: var(--base);
-}
-
-.nav-link {
-    padding: 0.5rem 1rem;
-}
-
-.nav-link:hover, .nav-link:focus {
-    text-decoration: none;
-}
-/* Nav end */
-
-/* Welcome Page */
-.landing {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.box {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.box img {
-    width: 100%;
-}
-/* Welcome Page end*/
-
-/* Deskripsi ISAC */
-.star {
-    position: relative;
-    width: 100%;
-    margin-top: -12em;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.star img {
-    width: 100%;
-}
-
-.desc-container {
-    padding: 0px 240px 50px 240px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.desc-container h2 {
-    text-align: center;
-    width: fit-content;
-}
-/* Deskripsi ISAC end */
-
-/* Value ISAC */
-.value {
-    padding: 10px 240px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: flex-start;
-    row-gap: 20px;
-}
-
-.val-name {
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.val-name img {
-    width: 100%;
-}
-/* Value ISAC end */
-
-/* Competition */
-.competition-lg {
-    padding: 50px 80px;
-}
-
-.competition-lg h2 {
-    padding-left: 80px;
-}
-
-.all {
-    background: url(../img/comp-lg-1.svg) no-repeat center center;
-    background-size: 100% 100%;
-    padding: 12vh 20vw 6vh 20vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-    
-.slideshow-container {
-    position: relative;
-}
-
-.slide {
-    display: none;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.content-1 {
-    display: grid;
-    min-height: 37vh;
-    grid-template-columns: 2fr 2fr 5fr;
-    gap: 20px;
-}
-
-.download-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.download-box img {
-    width: 30%;
-}
-
-.download-box button {
-    width: fit-content;
-}
-
-.soal {
-    justify-content: flex-end;
-}
-
-.guide {
-    justify-content: center;
-    padding-top: 100px;
-}
-
-.content-1 .desc-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-.content-1 p, .content-1 h3 {
-    text-align: end;
-}
-
-.timeline-1 {
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    min-height: 37vh;
-    /* padding-left: 5vw; */
-}
-
-.timeline-1 img {
-    padding: 0 5vw;
-    width: 100%;
-}
-
-.page-box {
-    height: 76px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.page {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    border-radius: 0px;
-    border: 1px solid var(--electric-violet);
-    background-color: var(--base);
-    transition: background-color 0.6s ease;
-}
-
-.page:hover, .active {
-    background-color: var(--buttercup);
-    box-shadow: 0px 0px 15px var(--buttercup);
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-/* Competition end */
-
-/* Tablet */
-@media screen and (max-width: 1100px) {
-    .all h3 {
-        font-size: 25px;
-    }
-    
-    .all h4 {
-        font-size: 16px;
-    }
-    
-    .all p, .all button {
-        font-size: 14px;
-    }
-    
-    /* Deskripsi ISAC */
-    .desc-container {
-        padding: 0px 150px 40px 150px;
-    }
-    /* Deskripsi ISAC end */
-    
-    /* Value ISAC */
-    .value {
-        padding: 10px 150px;
-    }
-    /* Value ISAC end */
-    
-    /* Competition */
-    .competition-lg {
-        padding: 20px 50px;
-    }
-    
-    .competition-lg h2 {
-        padding-left: 50px;
-    }
-    
-    .guide {
-        padding: 0;
-    }
-    /* Competition end */
-}
-
-/* Mobile */
-@media screen and (max-width: 700px) {
-    /* Deskripsi ISAC */
-    .desc-container {
-        padding: 0px 50px 30px 50px;
-    }
-    /* Deskripsi ISAC end */
-    
-    /* Value ISAC */
-    .val-overflow {
-        overflow-x: scroll;
-    }
-    
-    .val-overflow::-webkit-scrollbar {
-        width: 0px;
-    }
-    
-    .value {
-        padding: 10px 50px;
-        width: 300vw;
-    }
-    
-    .val-name {
-        width: 40vw;
-    }
-    /* Value ISAC end */
-}
-
-
 /*FAQ CSS*/
 .FAQtitle {
     padding: 20px 20px 8px 20px;
@@ -432,8 +114,8 @@ nav {
 }
 
 .tl-line-container {
-    padding: 0px 100px;
-    margin-top: -30px;
+    /* padding: 0 10vw; */
+    /* margin-top: -30px; */
     display: flex;
     flex-direction: column;
 }
@@ -446,12 +128,24 @@ nav {
     gap: 70px;
 }
 
+.tl-line .content {
+    display: flex;
+    justify-content: center;
+}
+
+.tl-line h3 {
+    line-height: unset;
+    font-size: 24px;
+}
+
 .tl-line.right {
     align-self: flex-end;
+    text-align: left;
 }
 
 .tl-line.left {
     align-self: flex-start;
+    text-align: right;
 }
 
 .tl-desc {
@@ -464,8 +158,16 @@ nav {
     align-items: flex-start;
 }
 
+.tl-desc.right p {
+    text-align: left;
+}
+
 .tl-desc.left {
     align-items: flex-end;
+}
+
+.tl-desc.left p {
+    text-align: right;
 }
 /* Timeline CSS End */
 
@@ -481,3 +183,43 @@ nav {
     padding-top: 0px;
 }
 /*Box Sponsor dan Medpar CSS End*/
+
+/* CONTACT US */
+.user-card {
+    margin-bottom: 1rem;
+}
+
+.user-card h6 {
+    font-size: 16px;
+}
+
+.user-card h3,
+.user-card h6 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .tl-line-container {
+        padding: 0 0.5rem;
+    }
+
+    .faq-box h3,
+    .tl-line-container h3 {
+        font-size: 16px;
+    }
+
+    .tl-line {
+        gap:0;
+    }
+
+    .tl-line img {
+        height: 75%;
+    }
+
+    .tl-line .content {
+        width: fit-content;
+    }
+}

@@ -31,6 +31,12 @@ body {
     width: 100%;
 }
 
+.alert button {
+    background: none;
+    border: none;
+    color: white;
+}
+
 .card {
     position: relative;
     margin: 20px;

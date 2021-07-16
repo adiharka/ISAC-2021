@@ -29,6 +29,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}"/>
 
     <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 

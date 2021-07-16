@@ -12,10 +12,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ISAC 2021" />
     <meta property="og:url" content="https://isac.himsiunair.com" />
-    <meta property="og:description"
-        content="Information System Airlangga Competition 2021" />
-    <meta property="og:image"
-        content="{{ asset('img/logo.png') }}" />
+    <meta property="og:description" content="Information System Airlangga Competition 2021" />
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" />
 
     <!-- ICON -->
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
@@ -45,38 +43,48 @@
                 }
             });
         }
+
     </script>
 </head>
 
 <body>
     <!-- Nav -->
     <nav class="nav">
-        <img id="logo-sm" src="{{ asset('img/landing-login-register/isac-sm.png') }}" onload="showOnScroll('logo-sm')" alt="ISAC 2021" />
+        <a href="#landing">
+            <img id="logo-clear" src="{{ asset('img/landing-login-register/isac-clear.png') }}"
+                onload="showOnScroll('logo-clear')" alt="ISAC 2021" style="opacity: 0" />
+        </a>
         <div class="nav-link-group">
             <a href="#competition" class="nav-link">Competition</a>
             <a href="#timeline" class="nav-link">Timeline</a>
-            <a href="" class="nav-link">About Us</a>
+            <a href="#contact-us" class="nav-link">Contact Us</a>
         </div>
         @auth
-            @if (Auth::user()->role == 'admin')
-                <a href="{{ route('dashboard') }}"><button class="btn-login">Dashboard</button></a>
-            @else
-                <a href="{{ route('user.index') }}"><button class="btn-login">Dashboard</button></a>
-            @endif
+        @if (Auth::user()->role == 'admin')
+        <a href="{{ route('dashboard') }}"><button class="btn-login">Dashboard</button></a>
         @else
-            <a href="{{ route('login') }}"><button class="btn-login">Login</button></a>
+        <a href="{{ route('user.index') }}"><button class="btn-login">Dashboard</button></a>
+        @endif
+        @else
+        <a href="{{ route('login') }}"><button class="btn-login">Login</button></a>
         @endauth
     </nav>
     <!-- Nav end -->
 
     <!-- welcome page -->
-    <div class="landing">
+    <div id="landing" class="landing">
         <div class="box">
-            <img src="{{ asset('img/landing-login-register/isac-lg.png') }}" alt="">
+            {{-- <img src="{{ asset('img/landing-login-register/isac-lg.png') }}" alt=""> --}}
+            <picture>
+                <source srcset="{{ asset('img/landing-login-register/isac-xl.png') }}" media="(min-width: 2050px)" />
+                <source srcset="{{ asset('img/landing-login-register/isac-lg.png') }}" media="(min-width: 800px)" />
+                <source srcset="{{ asset('img/landing-login-register/isac-md.png') }}" media="(min-width: 550px)" />
+                <img src="{{ asset('img/landing-login-register/isac-sm.png') }}" alt="Baby Sleeping" />
+            </picture>
             @if (Auth::check())
-                {{-- <a href="{{ route('login') }}"><button class="btn-lavender">Dash</button></a> --}}
+            {{-- <a href="{{ route('login') }}"><button class="btn-lavender">Dash</button></a> --}}
             @else
-               <a href="{{ route('register') }}"><button class="btn-lavender">REGISTER NOW!</button></a>
+            <a href="{{ route('register') }}"><button class="btn-lavender">REGISTER NOW!</button></a>
             @endif
         </div>
     </div>
@@ -84,13 +92,18 @@
 
     <!-- Deskripsi ISAC -->
     <div class="star">
-        <img src="{{ asset('img/landing-login-register/star.png') }}" alt="">
+        {{-- <img src="{{ asset('img/landing-login-register/star.png') }}" alt=""> --}}
+        <picture>
+            <source srcset="{{ asset('img/landing-login-register/star.png') }}" media="(min-width: 800px)" />
+            <img src="{{ asset('img/landing-login-register/star-sm.png') }}" alt="Baby Sleeping" />
+        </picture>
     </div>
     <div class="desc-container">
         <h2 class="gradient">What is ISAC?</h2>
         <p>Tahun ini ISAC datang dengan dua jenis kompetisi yaitu OLYMPIAD dan CREATIVE POSTER.
             ISAC OLYMPIAD akan menguji kemampuan logika, pemrograman dasar, serta ilmu sistem informasi dasar kamu.
-            Sedangkan ISAC CREATIVE POSTER akan menguji kemampuan peserta dalam menyelesaikan masalah dan mewujudkannya dalam bentuk poster</p>
+            Sedangkan ISAC CREATIVE POSTER akan menguji kemampuan peserta dalam menyelesaikan masalah dan mewujudkannya
+            dalam bentuk poster</p>
     </div>
     <!-- Deskripsi ISAC end -->
 
@@ -131,7 +144,8 @@
     <!-- Competition -->
     <div class="competition-lg" id="competition">
         <h2 class="gradient">COMPETITION</h2>
-        <div class="all top" style="background-size: 100% 100%; background: url('{{ asset('img/landing-login-register/comp-lg-1.svg')}}') no-repeat center center;">
+        <div class="all top"
+            style="background-size: 100% 100%; background: url('{{ asset('img/landing-login-register/comp-lg-1.svg')}}') no-repeat center center;">
             <div class="slideshow-container">
                 <div class="slide-top fade ">
                     <div class="content-1">
@@ -172,7 +186,8 @@
                 <span class="page-top" onclick="currentSlide(2)"></span>
             </div>
         </div>
-        <div class="all bottom" style="background: url('{{ asset('img/landing-login-register/comp-lg-2.svg') }}') no-repeat center center;">
+        <div class="all bottom"
+            style="background: url('{{ asset('img/landing-login-register/comp-lg-2.svg') }}') no-repeat center center;">
             <div class="slideshow-container">
                 <div class="slide-bottom fade ">
                     <div class="content-2">
@@ -203,7 +218,7 @@
                 <div class="slide-bottom fade">
                     <div class="timeline-2">
                         <h3>Timeline Olympiad</h3>
-                        <img src="{{ asset('img/landing-login-register/timeline-1.png') }}" alt="">
+                        <img src="{{ asset('img/landing-login-register/timeline-2.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -216,7 +231,8 @@
     <!-- ------------------------------------- -->
     <div class="competition-sm">
         <h2 class="gradient">COMPETITION</h2>
-        <div class="all-sm top" style="background: url('{{ asset('img/landing-login-register/comp-sm-11.svg')}}') no-repeat center center;">
+        <div class="all-sm top"
+            style="background: url('{{ asset('img/landing-login-register/comp-sm-11.svg')}}') no-repeat center center;">
             <div class="slideshow-container">
                 <div class="slide-sm-top fade">
                     <div class="content-1">
@@ -260,7 +276,8 @@
             </div>
         </div>
 
-        <div class="all-sm bottom" style="background: url('{{ asset('img/landing-login-register/comp-sm-21.svg')}}') no-repeat center center;">
+        <div class="all-sm bottom"
+            style="background: url('{{ asset('img/landing-login-register/comp-sm-21.svg')}}') no-repeat center center;">
             <div class="slideshow-container">
                 <div class="slide-sm-bottom fade">
                     <div class="content-2">
@@ -291,9 +308,9 @@
                     </div>
                 </div>
                 <div class="slide-sm-bottom fade">
-                    <div class="timeline-sm-2" style="background: url('{{ asset('img/landing-login-register/comp-sm-22.svg')}}') no-repeat center center;">
+                    <div class="timeline-sm-2">
                         <h3>Timeline Olympiad</h3>
-                        <img src="{{ asset('img/landing-login-register/timeline-sm-1.png') }}" alt="">
+                        <img src="{{ asset('img/landing-login-register/timeline-sm-2.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -304,10 +321,9 @@
         </div>
     </div>
     <!-- Competition end -->
-    <div style="height: 100px;"></div>
 
     <!-- FAQ -->
-    <div class="FAQ">
+    {{-- <div class="FAQ">
         <div class="FAQtitle">
             <h2 class="gradient">FREQUENTLY ASKED QUESTION</h2>
         </div>
@@ -315,10 +331,10 @@
         <div class="faq-box">
             <div></div>
             <div class="right-que">
-                <h4>Pertanyaan 1</h4>
+                <h3>Pertanyaan 1</h3>
             </div>
             <div class="left-que">
-                <h4>Pertanyaan 2</h4>
+                <h3>Pertanyaan 2</h3>
             </div>
             <div class="content-right">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
@@ -336,10 +352,10 @@
         <div class="faq-box">
             <div></div>
             <div class="right-que">
-                <h4>Pertanyaan 3</h4>
+                <h3>Pertanyaan 3</h3>
             </div>
             <div class="left-que">
-                <h4>Pertanyaan 4</h4>
+                <h3>Pertanyaan 4</h3>
             </div>
             <div class="content-right">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
@@ -353,21 +369,22 @@
             </div>
             <div></div>
         </div>
-
-
-
-        <div class="showbox">
-            <a href="">Show More</a>
-        </div>
-    </div>
+    </div> --}}
+    {{-- <div class="showbox">
+        <a href="">Show More</a>
+    </div> --}}
     </div>
     <!-- FAQ End -->
 
 
     <!-- Timeline -->
-    <div id="timeline" class="divider square" style="padding-top: 2rem">
+    <div id="timeline" class="divider square" style="padding-top: 3rem">
         <div class="timeline">
-            <img src="{{ asset('img/landing-login-register/squaree.png') }}">
+            {{-- <img src="{{ asset('img/landing-login-register/squaree.png') }}"> --}}
+            <picture>
+                <source srcset="{{ asset('img/landing-login-register/squaree.png') }}" media="(min-width: 790px)" />
+                <img src="{{ asset('img/landing-login-register/squaree-sm.png') }}" alt="Baby Sleeping" />
+            </picture>
             <h2 class="gradient">TIMELINE</h2>
         </div>
     </div>
@@ -376,20 +393,20 @@
         <div class="tl-line right">
             <div>
             </div>
-            <div>
+            <div class="content">
                 <img src="{{ asset('img/landing-login-register/square1.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
+                <h3>Pendaftaran Gelombang 1</h3>
+                <p>17 Juli - 1 Agustus 2021</p>
             </div>
         </div>
         <div class="tl-line left">
             <div class="tl-desc left">
-                <h3>Timeline 2</h3>
-                <p>03 Juni 2021</p>
+                <h3>Pendaftaran Gelombang 2</h3>
+                <p>2 - 29 Agustus 2021</p>
             </div>
-            <div>
+            <div class="content">
                 <img src="{{ asset('img/landing-login-register/square2.png') }}">
             </div>
             <div>
@@ -398,20 +415,20 @@
         <div class="tl-line right">
             <div>
             </div>
-            <div>
+            <div class="content">
                 <img src="{{ asset('img/landing-login-register/square3.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Timeline 3</h3>
-                <p>03 Juni 2021</p>
+                <h3>Pengumuman Hasil Babak Penyisihan</h3>
+                <p>26 September 2021</p>
             </div>
         </div>
         <div class="tl-line left">
             <div class="tl-desc left">
-                <h3>Timeline 4</h3>
-                <p>03 Juni 2021</p>
+                <h3>Semifinal</h3>
+                <p>3 Oktober 2021</p>
             </div>
-            <div>
+            <div class="content">
                 <img src="{{ asset('img/landing-login-register/square4.png') }}">
             </div>
             <div>
@@ -420,32 +437,60 @@
         <div class="tl-line right">
             <div>
             </div>
-            <div>
+            <div class="content">
                 <img src="{{ asset('img/landing-login-register/square5.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Timeline 5</h3>
-                <p>03 Juni 2021</p>
+                <h3>Pengumuman Hasil Babak Semifinal</h3>
+                <p>5 Oktober 2021</p>
+            </div>
+        </div>
+        <div class="tl-line left">
+            <div class="tl-desc left">
+                <h3>Final</h3>
+                <p>9 - 10 Oktober 2021</p>
+            </div>
+            <div class="content">
+                <img style="height: 50%" src="{{ asset('img/landing-login-register/square4.png') }}">
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="tl-line right">
+            <div>
+            </div>
+            <div class="content">
+                <img style="height: 45%" src="{{ asset('img/landing-login-register/square5.png') }}">
+            </div>
+            <div class="tl-desc right">
+                <h3>Pengumuman Juara</h3>
+                <p>10 Oktober 2021</p>
             </div>
         </div>
     </div>
     <!-- Timeline end -->
 
     <!-- Box Sponsor dan Medpar -->
-    <div class="sponsor">
+    <div id="contact-us" class="sponsor">
         <div class="bintang">
-            <img src="{{ asset('img/landing-login-register/bintang.png') }}">
+            {{-- <img src="{{ asset('img/landing-login-register/bintang.png') }}"> --}}
+            <picture>
+                <source srcset="{{ asset('img/landing-login-register/bintang.png') }}" media="(min-width: 1200px)" />
+                <img src="{{ asset('img/landing-login-register/bintang-sm.png') }}" alt="Baby Sleeping" />
+            </picture>
         </div>
         <div class="title">
-            <h2 class="gradient">Sponsor</h2>
+            <h2 class="gradient">Contact Us</h2>
         </div>
-        <div class="title">
+        @include('template.cp')
+        {{-- <div class="title">
             <h2 class="gradient">Media Partner</h2>
-        </div>
+        </div> --}}
         <div class="bintang">
             <img src="{{ asset('img/landing-login-register/Border.png') }}">
         </div>
-
+        <p>© Copyright ISAC 2021. All Rights Reserved</p>
+        <br>
     </div>
     <!-- Box Sponsor dan Medpar End -->
 

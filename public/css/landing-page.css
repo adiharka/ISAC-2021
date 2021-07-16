@@ -244,6 +244,7 @@ nav {
 
 .content-1 p, .content-1 h3 {
     text-align: end;
+    align-self: flex-end;
 }
 
 .timeline-1 {
@@ -256,7 +257,7 @@ nav {
 }
 
 .timeline-1 img, .timeline-2 img {
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
     width: 100%;
 }
 
@@ -318,6 +319,7 @@ nav {
 
 .content-2 p, .content-2 h3 {
     text-align: start;
+    /* align-self: flex-end; */
 }
 
 .timeline-2 {
@@ -334,59 +336,6 @@ nav {
 }
 /* Competition end */
 
-/* Timeline */
-.square {
-    grid-template-columns: 10fr 12fr;
-}
-
-/* .square .timeline {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 150px;
-}  */
-
-.tl-line img {
-    height: 100%;
-}
-
-.tl-line-container {
-    padding: 0px 150px;
-    margin-top: -30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.tl-line {
-    margin-top: -70px;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 4fr 3fr 4fr;
-    gap: 70px;
-}
-
-.tl-line.right {
-    align-self: flex-start;
-}
-
-.tl-line.left {
-    align-self: flex-end;
-}
-
-.tl-desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tl-desc.right {
-    align-items: flex-start;
-}
-
-.tl-desc.left {
-    align-items: flex-end;
-}
-/* Timeline end */
 
 /* Tablet */
 @media screen and (max-width: 1100px) {
@@ -606,5 +555,22 @@ nav {
     .all-sm {
         padding-bottom: 50px;
     }
+
+    .FAQtitle {
+        padding-left: 0;
+    }
     /* Competition end */
+}
+
+/* Mobile */
+@media screen and (max-width: 450px) {
+    .content-1 .downloads,
+    .content-2 .downloads {
+        padding: 0;
+        gap: 16px;
+    }
+
+    .tl-line img {
+        height: 50%;
+    }
 }

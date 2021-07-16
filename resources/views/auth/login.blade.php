@@ -21,6 +21,11 @@
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
 
+    <!-- Bootstrap 4 -->
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    {{-- <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> --}}
+
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/register-login.css') }}">
