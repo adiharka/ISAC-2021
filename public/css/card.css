@@ -194,13 +194,14 @@ button:hover.card1 {
 
 .profile-card {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
 .user-card {
     width: fit-content;
     padding: 1rem;
-    background-color: #1f2124;
+    background-color: #1f21246b;
     margin: 0.5rem;
 
 }

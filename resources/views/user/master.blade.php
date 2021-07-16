@@ -29,7 +29,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}"/>
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
@@ -54,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse"
                     data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="color:white">☰</span>
+                    <span class="navbar-toggler-icon" style="color:white; line-height: normal">☰</span>
                 </button>
 
                 <div class="collapse navbar-collapse order-3" id="navbarCollapse">
@@ -69,6 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="nav-item" id="nav-kontak">
                             <a href="{{route('user.kontak.index')}}" class="nav-link">Kontak Panitia</a>
                         </li>
+                        <div class="dot"></div>
                     </ul>
                 </div>
 

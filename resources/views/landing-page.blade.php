@@ -100,9 +100,12 @@
     </div>
     <div class="desc-container">
         <h2 class="gradient">What is ISAC?</h2>
-        <p>Tahun ini ISAC datang dengan dua jenis kompetisi yaitu OLYMPIAD dan CREATIVE POSTER.
-            ISAC OLYMPIAD akan menguji kemampuan logika, pemrograman dasar, serta ilmu sistem informasi dasar kamu.
-            Sedangkan ISAC CREATIVE POSTER akan menguji kemampuan peserta dalam menyelesaikan masalah dan mewujudkannya
+        <p>ISAC merupakan kompetisi tahunan yang diselenggarakan oleh HIMSI UNAIR. Tahun ini ISAC datang dengan dua
+            jenis kompetisi yaitu OLYMPIAD dan CREATIVE POSTER.<br>
+            <span class="yellow-txt">ISAC Olympiad</span> akan menguji kemampuan logika, pemrograman dasar, serta ilmu
+            sistem informasi dasar kamu.
+            Sedangkan <span class="purple-txt">ISAC Creative Poster</span> akan menguji kemampuan peserta dalam
+            menyelesaikan masalah dan mewujudkannya
             dalam bentuk poster</p>
     </div>
     <!-- Deskripsi ISAC end -->
@@ -149,15 +152,12 @@
             <div class="slideshow-container">
                 <div class="slide-top fade ">
                     <div class="content-1">
-                        <div class="download-box soal">
-                            <h4>LATIHAN SOAL</h4>
-                            <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <button class="btn-submit focus">Download</button>
-                        </div>
+                        {{-- <div class="download-box soal">
+                        </div> --}}
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <button class="btn-submit focus">Download</button>
+                            <a href="http://bit.ly/guidebookPosterISAC2021"><button class="btn-submit focus">Download</button></a>
                         </div>
                         <div class="desc-box">
                             <h3>Creative Poster</h3>
@@ -206,12 +206,12 @@
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <button class="btn-submit focus">Download</button>
+                            <a href="http://bit.ly/guidebookOlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
                         </div>
                         <div class="download-box soal">
                             <h4>LATIHAN SOAL</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <button class="btn-submit focus">Download</button>
+                            <button class="btn-disabled">Soon</button>
                         </div>
                     </div>
                 </div>
@@ -252,14 +252,9 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <!-- <img src="assets/img/file.png" alt=""> -->
-                                <button class="btn-submit focus">Download</button>
+                                <a href="http://bit.ly/guidebookPosterISAC2021"><button class="btn-submit focus">Download</button></a>
                             </div>
-                            <div class="download-box soal">
-                                <h4>LATIHAN SOAL</h4>
-                                <!-- <img src="assets/img/file.png" alt=""> -->
-                                <button class="btn-submit focus">Download</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -296,13 +291,11 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <!-- <img src="assets/img/file.png" alt=""> -->
-                                <button class="btn-submit focus">Download</button>
+                                <a href="http://bit.ly/guidebookOlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
                             </div>
                             <div class="download-box soal">
                                 <h4>LATIHAN SOAL</h4>
-                                <!-- <img src="assets/img/file.png" alt=""> -->
-                                <button class="btn-submit focus">Download</button>
+                                <button class="btn-disabled">Soon</button>
                             </div>
                         </div>
                     </div>
@@ -373,7 +366,7 @@
     {{-- <div class="showbox">
         <a href="">Show More</a>
     </div> --}}
-    </div>
+    {{-- </div> --}}
     <!-- FAQ End -->
 
 
@@ -398,13 +391,13 @@
             </div>
             <div class="tl-desc right">
                 <h3>Pendaftaran Gelombang 1</h3>
-                <p>17 Juli - 1 Agustus 2021</p>
+                <p>19 Juli - 1 Agustus 2021</p>
             </div>
         </div>
         <div class="tl-line left">
             <div class="tl-desc left">
                 <h3>Pendaftaran Gelombang 2</h3>
-                <p>2 - 29 Agustus 2021</p>
+                <p>4 - 29 Agustus 2021</p>
             </div>
             <div class="content">
                 <img src="{{ asset('img/landing-login-register/square2.png') }}">
@@ -419,13 +412,13 @@
                 <img src="{{ asset('img/landing-login-register/square3.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Pengumuman Hasil Babak Penyisihan</h3>
-                <p>26 September 2021</p>
+                <h3>Babak Penyisihan <span class="yellow-txt">(Olympiad)</span></h3>
+                <p>19 September 2021</p>
             </div>
         </div>
         <div class="tl-line left">
             <div class="tl-desc left">
-                <h3>Semifinal</h3>
+                <h3>Babak Semifinal <span class="yellow-txt">(Olympiad)</span></h3>
                 <p>3 Oktober 2021</p>
             </div>
             <div class="content">
@@ -441,14 +434,14 @@
                 <img src="{{ asset('img/landing-login-register/square5.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Pengumuman Hasil Babak Semifinal</h3>
-                <p>5 Oktober 2021</p>
+                <h3>Babak Final <span class="purple-txt">(Poster)</span></h3>
+                <p>9 Oktober 2021</p>
             </div>
         </div>
         <div class="tl-line left">
             <div class="tl-desc left">
-                <h3>Final</h3>
-                <p>9 - 10 Oktober 2021</p>
+                <h3>Babak Final <span class="yellow-txt">(Olympiad)</span></h3>
+                <p>10 Oktober 2021</p>
             </div>
             <div class="content">
                 <img style="height: 50%" src="{{ asset('img/landing-login-register/square4.png') }}">
@@ -463,7 +456,7 @@
                 <img style="height: 45%" src="{{ asset('img/landing-login-register/square5.png') }}">
             </div>
             <div class="tl-desc right">
-                <h3>Pengumuman Juara</h3>
+                <h3>🌟 Pengumuman Pemenang 🌟</h3>
                 <p>10 Oktober 2021</p>
             </div>
         </div>
@@ -482,7 +475,9 @@
         <div class="title">
             <h2 class="gradient">Contact Us</h2>
         </div>
-        @include('template.cp')
+        <div class="contact-group">
+            @include('template.cp')
+        </div>
         {{-- <div class="title">
             <h2 class="gradient">Media Partner</h2>
         </div> --}}

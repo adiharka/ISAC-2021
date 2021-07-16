@@ -3,7 +3,7 @@
 @section('header')
 <link rel="stylesheet" href="{{ asset('css/card.css') }}">
 <script>
-    document.getElementById('nav-dashboard').className = 'nav-item badge-pill badge-dark';
+    document.getElementById('nav-dashboard').className = 'nav-item active';
 </script>
 @endsection
 
@@ -17,7 +17,7 @@
         @if (Auth::user()->verified)
         <h5>Terimasih telah mendaftar ISAC 2021, pantau terus timelinenya ya!</h5>
         @else
-            <div class="d-flex">
+            <div class="card-group">
                 @if (!$lengkap)
                 <a class="card1" href="{{ route('user.akun.index') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="currentColor"
@@ -75,7 +75,7 @@
                 </button>
             </div>
             <br>
-            <p class="ml-3">Setelah yakin semua data sudah benar harap menghubungi kontak panitia berikut agar akun kamu segera terverifikasi</p>
+            <p class="ml-3">Pastikan data sudah lengkap dan benar. Lalu, hubungi kontak panitia berikut agar akun kamu segera diverifikasi</p>
             @include('template.cp')
             @endif
         @endif

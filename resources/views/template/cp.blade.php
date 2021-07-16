@@ -1,4 +1,4 @@
-<div class="d-flex flex-row flex-sm-wrap">
+<div>
     <div class="card user-card">
         <h3 style="margin:0">Sulthan</h3>
         <h6>Kontak Olimpiade</h6>

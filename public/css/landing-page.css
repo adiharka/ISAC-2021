@@ -192,8 +192,9 @@ nav {
 
 .content-1 {
     display: grid;
-    min-height: 37vh;
-    grid-template-columns: 2fr 2fr 5fr;
+    /* min-height: 37vh; */
+    min-height: 325px;
+    grid-template-columns: 4fr 5fr;
     gap: 20px;
 }
 
@@ -202,10 +203,6 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-.download-box img {
-    width: 30%;
 }
 
 .download-box button {
@@ -253,7 +250,8 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    min-height: 37vh;
+    /* min-height: 37vh; */
+    min-height: 325px;
 }
 
 .timeline-1 img, .timeline-2 img {
@@ -305,7 +303,8 @@ nav {
 .content-2 {
     display: grid;
     padding: 1.5rem;
-    min-height: 37vh;
+    /* min-height: 37vh; */
+    min-height: 325px;
     grid-template-columns: 5fr 2fr 2fr;
     gap: 20px;
 }
@@ -328,7 +327,8 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 37vh;
+    /* min-height: 37vh; */
+    min-height: 325px;
 }
 
 .competition-sm {

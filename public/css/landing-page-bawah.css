@@ -200,6 +200,12 @@
     font-family: 'Poppins';
 }
 
+.contact-group > div:first-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
     .tl-line-container {
@@ -221,5 +227,9 @@
 
     .tl-line .content {
         width: fit-content;
+    }
+
+    .contact-group h3 {
+        font-size: 20px;
     }
 }

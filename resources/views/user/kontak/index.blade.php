@@ -3,7 +3,7 @@
 @section('header')
 <link rel="stylesheet" href="{{ asset('css/card.css') }}">
 <script>
-    document.getElementById('nav-kontak').className = 'nav-item badge-pill badge-dark';
+    document.getElementById('nav-kontak').className = 'nav-item active';
 </script>
 @endsection
 

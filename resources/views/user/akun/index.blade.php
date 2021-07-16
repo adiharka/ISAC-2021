@@ -4,7 +4,7 @@
 
 @section('header')
 <script>
-    document.getElementById('nav-akun').className = 'nav-item badge-pill badge-dark';
+    document.getElementById('nav-akun').className = 'nav-item active';
 </script>
 <link rel="stylesheet" href="{{ asset('css/card.css') }}">
 
@@ -43,7 +43,7 @@
         <div class="d-md-flex flex-nowrap" style="flex-grow: 1; gap:0.75rem">
             @foreach ($members as $member)
             <div class="card" style="">
-                <img class="card-img-top" src="{{$member->photoID}}" style="object-fit:cover; height:125px;"
+                <img class="card-img-top" src="{{$member->photoID}}" style="object-fit:cover; height:275px;"
                     alt="Foto Peserta" onerror="this.onerror=null;this.src='{{ asset('img/default.jpg') }}';">
                 @if (!$member->profil_lengkap)
                 <span class="bg-danger text-center">Mohon lengkapi data</span>
