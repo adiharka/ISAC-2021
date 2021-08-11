@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Member;
 use App\Models\Log;
+use App\Models\Packet;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
@@ -18,11 +19,12 @@ class AdminController extends Controller
      */
     public function index()
     {
+        $packets = Packet::get();
         $count = User::where('role', '!=', 'admin')->count();
         $olim = User::where('role', 'olim')->get();
         $poster = User::where('role', 'poster')->get();
         $member = Member::get();
-        return view('admin.dashboard.index', compact('count', 'olim', 'poster', 'member'));
+        return view('admin.dashboard.index', compact('count', 'olim', 'poster', 'member', 'packets'));
     }
 
     /**

@@ -16,10 +16,11 @@ class CreatePacketsTable extends Migration
         Schema::create('packets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->tinyInteger('question_count');
-            $table->dateTime('open');
-            $table->dateTime('close');
-            $table->time('duration');
+            $table->string('detail')->nullable();
+            $table->tinyInteger('question_count')->nullable();
+            $table->dateTime('open')->nullable();
+            $table->dateTime('close')->nullable();
+            $table->string('duration')->nullable();
             $table->timestamps();
         });
     }

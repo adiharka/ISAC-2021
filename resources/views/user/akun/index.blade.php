@@ -119,6 +119,7 @@
                             <div class="mb-3">
                                 <label for="line" class="form-label">ID Line</label>
                                 <input name="line" type="text" class="form-control" id="line">
+                                <div id="lineHelp" class="form-text small">Isi dengan tanda strip (-) jika memang tidak ada</div>
                             </div>
                             <div class="mb-3">
                                 <label for="whatsapp" class="form-label">Nomor Whatsapp</label>

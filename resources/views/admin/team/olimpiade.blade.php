@@ -63,6 +63,7 @@
                     @endif
                     </td>
                     <td>{{ $team->school }}</td>
+                    <td>{{ $team->school }}</td>
                     <td>{{ $team->email }}</td>
                     <td style="padding: 0.5rem"> <a href="{{ route('teamdetail', ['id' => $team->id])}}"
                             class="btn btn-block btn-sm btn-default">Detail</a> </td>

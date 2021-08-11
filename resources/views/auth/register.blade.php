@@ -248,18 +248,23 @@
             <h4>Info Peserta <small id="maks_orang">(maks 3 orang)</small></h4>
             <div class="input-container">
                 <input name="name" type="text" class="input" placeholder=" " value="{{ old('name') }}">
-                <div class="cut medium"></div>
-                <label for="name" class="placeholder">Nama Ketua</label>
+                <div class="cut longest"></div>
+                <label for="name" class="placeholder">Nama Anggota 1 (Ketua)</label>
+            </div>
+            <div class="input-container">
+                <input name="whatsapp" type="text" class="input" placeholder=" " value="{{ old('whatsapp') }}">
+                <div class="cut longest"></div>
+                <label for="whatsapp" class="placeholder">Kontak Whatsapp Aktif</label>
             </div>
             <div class="input-container">
                 <input name="name2" type="text" class="input" placeholder=" " value="{{ old('name2') }}">
                 <div class="cut long"></div>
-                <label for="name2" class="placeholder">Nama Anggota</label>
+                <label for="name2" class="placeholder">Nama Anggota 2</label>
             </div>
             <div id="anggota"  class="input-container">
                 <input id="anggota_input" name="name3" type="text" class="input" placeholder=" " value="{{ old('name3') }}">
                 <div class="cut long"></div>
-                <label for="name3" class="placeholder">Nama Anggota</label>
+                <label for="name3" class="placeholder">Nama Anggota 3</label>
             </div>
             {{-- <div class="option">
                 <button class="btn-lavender">Hapus</button>

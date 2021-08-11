@@ -81,7 +81,8 @@ class AuthController extends Controller
             'teamname'              => 'required|min:1|max:35|unique:users,teamname',
             'email'                 => 'required|email|unique:users,email',
             'password'              => 'required|confirmed',
-            'name'                  => 'required'
+            'name'                  => 'required',
+            'whatsapp'              => 'required',
         ];
 
         $messages = [
@@ -99,6 +100,7 @@ class AuthController extends Controller
             'password.required'     => 'Password wajib diisi',
             'password.confirmed'    => 'Password tidak sama dengan konfirmasi password',
             'name.required'         => 'Nama ketua wajib diisi',
+            'whatsapp.required'         => 'Nomor whatsapp wajib diisi',
         ];
 
         $validator1 = Validator::make($request->all(), $rules, $messages);
@@ -173,7 +175,7 @@ class AuthController extends Controller
         $user->teamname = ($request->teamname);
         $user->school = ($request->school);
         $user->school_province = ucwords(strtolower($request->school_province));
-        $user->school_city = ($request->school_city);
+        $user->school_city = ucwords(strtolower($request->school_city));
         $user->email = strtolower($request->email);
         $user->password = Hash::make($request->password);
         $user->active = 1;
@@ -191,6 +193,7 @@ class AuthController extends Controller
         $member = new Member;
         $member->user_id = ($user->id);
         $member->leader = (1);
+        $member->whatsapp = $request->whatsapp;
         $member->name = ($request->name);
         $simpan1 = $member->save();
 

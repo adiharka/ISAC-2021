@@ -38,6 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function takepacket()
+    {
+        return $this->hasMany(TakePacket::class);
+    }
+
     public function member()
     {
         return $this->hasMany(Member::class);

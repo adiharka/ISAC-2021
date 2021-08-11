@@ -24,7 +24,6 @@ class CreateUsersTable extends Migration
             $table->string('school_province')->nullable();
             $table->boolean('verified')->default(0);
             $table->string('payment_photo')->nullable();
-            $table->string('question_order')->nullable();
             $table->tinyInteger('profil_lengkap')->default(0);
             $table->string('password');
             $table->boolean('active');

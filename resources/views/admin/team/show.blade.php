@@ -36,6 +36,8 @@
 <!-- Default box -->
 <div class="card card-solid">
     @if ($status)
+
+    {{-- INFO TIM --}}
     <div class="card-header">
         <h3 class="text-muted">Info Tim</h3>
         @if (!$team->verified)
@@ -61,6 +63,25 @@
                 Belum Terverifikasi
             @endif </p>
     </div>
+
+    {{-- HASIL LOMBA --}}
+    @if ($team->role == 'olim')
+        <div class="card mx-3">
+            <div class="card-header bg-dark">
+                Soal yang telah dikerjakan
+            </div>
+            @foreach ($takepackets as $takepacket)
+            <div class="card-body">
+                <a href="{{ route('admin.team.olimpiade.show', $takepacket->id) }}">{{ $takepacket->packet->name }} -> {{ $takepacket->mark }}</a>
+            </div>
+            @endforeach
+        </div>
+
+    @else
+
+    @endif
+
+    {{-- INFO PESERTA --}}
     <div class="card-header">
         <h3 class="text-muted">Info Peserta</h3>
     </div>
@@ -88,21 +109,16 @@
                                 <p class="m-0"><b>Tanggal Lahir :</b> {{ $member->borndate }}</p>
                             </div>
                         </div>
-                        <img class="card-img-top" src="{{$member->photoID}}" alt="" width="125px">
+                        <img class="card-img-top" src="{{ $member->photoID }}" alt="" width="125px">
                 </div>
-                {{-- <div class="card-footer">
-                    <div class="text-right">
-                        <a href="#" class="btn btn-sm btn-primary">
-                            <i class="fas fa-user"></i> Edit Profile
-                        </a>
-                    </div>
-                </div> --}}
             </div>
             @empty
             <p>Seluruh panitia ISAC 2021 :D</p>
             @endforelse
         </div>
     </div>
+
+    {{-- ACTIVITY LOG --}}
     <div class="card-header">
         <h3 class="text-muted">Log Aktifitas</h3>
     </div>
@@ -136,6 +152,8 @@
         </div>
     </div>
     <!-- /.card-body -->
+
+    {{-- KALO PENGGUNA GA KETEMU --}}
     @else
     <div class="card-body pb-0">
     <p>Tim dengan ID {{$id}} tidak ditemukan</p>

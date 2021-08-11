@@ -98,7 +98,7 @@
             <img src="{{ asset('img/landing-login-register/star-sm.png') }}" alt="Baby Sleeping" />
         </picture>
     </div>
-    <div class="desc-container">
+    <div class="desc-container" style="max-width: 1400px; margin: auto">
         <h2 class="gradient">What is ISAC?</h2>
         <p>ISAC merupakan kompetisi tahunan yang diselenggarakan oleh HIMSI UNAIR. Tahun ini ISAC datang dengan dua
             jenis kompetisi yaitu OLYMPIAD dan CREATIVE POSTER.<br>
@@ -146,7 +146,7 @@
 
     <!-- Competition -->
     <div class="competition-lg" id="competition">
-        <h2 class="gradient">COMPETITION</h2>
+        <h2 class="gradient" style="max-width: 1400px; margin: auto">COMPETITION</h2>
         <div class="all top"
             style="background-size: 100% 100%; background: url('{{ asset('img/landing-login-register/comp-lg-1.svg')}}') no-repeat center center;">
             <div class="slideshow-container">
@@ -157,7 +157,7 @@
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <a href="http://bit.ly/guidebookPosterISAC2021"><button class="btn-submit focus">Download</button></a>
+                            <a href="http://bit.ly/PosterISAC2021"><button class="btn-submit focus">Download</button></a>
                         </div>
                         <div class="desc-box">
                             <h3>Creative Poster</h3>
@@ -206,13 +206,13 @@
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <a href="http://bit.ly/guidebookOlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
+                            <a href="http://bit.ly/OlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
                         </div>
-                        <div class="download-box soal">
+                        {{-- <div class="download-box soal">
                             <h4>LATIHAN SOAL</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
                             <button class="btn-disabled">Soon</button>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="slide-bottom fade">
@@ -252,7 +252,7 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <a href="http://bit.ly/guidebookPosterISAC2021"><button class="btn-submit focus">Download</button></a>
+                                <a href="http://bit.ly/PosterISAC2021"><button class="btn-submit focus">Download</button></a>
                             </div>
 
                         </div>
@@ -291,12 +291,12 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <a href="http://bit.ly/guidebookOlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
+                                <a href="http://bit.ly/OlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
                             </div>
-                            <div class="download-box soal">
+                            {{-- <div class="download-box soal">
                                 <h4>LATIHAN SOAL</h4>
                                 <button class="btn-disabled">Soon</button>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -316,7 +316,7 @@
     <!-- Competition end -->
 
     <!-- FAQ -->
-    {{-- <div class="FAQ">
+    <div class="FAQ" style="max-width: 1400px; margin: auto; padding: 0 1rem">
         <div class="FAQtitle">
             <h2 class="gradient">FREQUENTLY ASKED QUESTION</h2>
         </div>
@@ -324,20 +324,16 @@
         <div class="faq-box">
             <div></div>
             <div class="right-que">
-                <h3>Pertanyaan 1</h3>
+                <h3>Gimana caranya daftar??</h3>
             </div>
             <div class="left-que">
-                <h3>Pertanyaan 2</h3>
+                <h3>Apakah boleh mengikuti lomba secara individu?</h3>
             </div>
             <div class="content-right">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
-                    repellendus laudantium explicabo dolorum ratione itaque dicta aut sapiente enim, nobis quides
-                    officiis qui, doloremque reprehenderit cum?</p>
+                <p>Tekan tombol register now lalu isi form yang ada. Setelah itu login untuk melengkapi data yang tersedia dan membayar biaya pendaftaran</p>
             </div>
             <div class="content-left">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
-                    repellendus laudantium explicabo dolorum ratione itaque dicta aut sapiente enim, nobis quides
-                    officiis qui, doloremque reprehenderit cum?</p>
+                <p>Baik lomba olimpiade ataupun poster boleh diikuti secara individual</p>
             </div>
             <div></div>
         </div>
@@ -345,24 +341,37 @@
         <div class="faq-box">
             <div></div>
             <div class="right-que">
-                <h3>Pertanyaan 3</h3>
+                <h3>Sudah mendaftar tapi akun belum diverifikasi</h3>
             </div>
             <div class="left-que">
-                <h3>Pertanyaan 4</h3>
+                <h3>Apakah ada acara lain selain perlombaan</h3>
             </div>
             <div class="content-right">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
-                    repellendus laudantium explicabo dolorum ratione itaque dicta aut sapiente enim, nobis quides
-                    officiis qui, doloremque reprehenderit cum?</p>
+                <p>Pastikan data yang dibutuhkan tiap peserta sudah dilengkapi dan sudah membayar biaya pendaftaran. Jika sudah maka tunggu antrian pemeriksaan oleh panitia</p>
             </div>
             <div class="content-left">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ea necessitatibus, dolor suscipit
-                    repellendus laudantium explicabo dolorum ratione itaque dicta aut sapiente enim, nobis quides
-                    officiis qui, doloremque reprehenderit cum?</p>
+                <p>Tentu saja ada, pantau terus infonya di instagaram official kami</p>
             </div>
             <div></div>
         </div>
-    </div> --}}
+
+        <div class="faq-box">
+            <div></div>
+            <div class="right-que">
+                <h3>Peserta tidak lolos final tetap dapat sertifikat?</h3>
+            </div>
+            <div class="left-que">
+                <h3>Untuk link grup telegram didapat dari mana?</h3>
+            </div>
+            <div class="content-right">
+                <p>Tentu saja tetap mendapatkan sertifikat dan bisa kamu lampirkan untuk pendaftaran SNMPTN ataupun jalur lainnya</p>
+            </div>
+            <div class="content-left">
+                <p>Jika akun kamu sudah terverifikasi oleh panitia maka kamu akan dikontak melalui email yang berisi link tersebut</p>
+            </div>
+            <div></div>
+        </div>
+    </div>
     {{-- <div class="showbox">
         <a href="">Show More</a>
     </div> --}}
@@ -464,7 +473,7 @@
     <!-- Timeline end -->
 
     <!-- Box Sponsor dan Medpar -->
-    <div id="contact-us" class="sponsor">
+    <div class="sponsor">
         <div class="bintang">
             {{-- <img src="{{ asset('img/landing-login-register/bintang.png') }}"> --}}
             <picture>
@@ -473,17 +482,48 @@
             </picture>
         </div>
         <div class="title">
+            <h2 class="gradient">Media Partner</h2>
+        </div>
+        <div class="medpart">
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/InfoLombaBeasiswa.png')}}" alt="Info Lomba & Beasiswa">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/InfoLombaEvent.png')}}" alt="Info Lomba Event">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/InfoLombaInd.png')}}" alt="Info Lomba IND">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/JagatLomba.png')}}" alt="Jagat Lomba">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/LombaSma.png')}}" alt="Lomba SMA">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/OlimpiadeUpdate.png')}}" alt="Olimpiade Update">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/LombaUpdate.png')}}" alt="Lomba Update">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/Bem.png')}}" alt="Bem">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/BemFST.png')}}" alt="BEM FST">
+            </div>
+        </div>
+        <div class="bintang">
+            <img src="{{ asset('img/landing-login-register/Border.png') }}">
+        </div>
+        <div id="contact-us"  class="title">
             <h2 class="gradient">Contact Us</h2>
         </div>
         <div class="contact-group">
             @include('template.cp')
         </div>
-        {{-- <div class="title">
-            <h2 class="gradient">Media Partner</h2>
-        </div> --}}
-        <div class="bintang">
-            <img src="{{ asset('img/landing-login-register/Border.png') }}">
-        </div>
+        <br>
+        <br>
         <p>© Copyright ISAC 2021. All Rights Reserved</p>
         <br>
     </div>

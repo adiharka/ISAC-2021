@@ -271,6 +271,10 @@ select:focus {
     width: 132px;
 }
 
+.cut.longest {
+    width: 148px;
+}
+
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
   transform: translateY(5px);

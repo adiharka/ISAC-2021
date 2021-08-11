@@ -17,11 +17,15 @@ class CreateAnswersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('question_id');
+            $table->unsignedBigInteger('packet_id');
             $table->string('answer', 1)->nullable();
+            $table->boolean('unsure')->default(0);
+            $table->string('number');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+            $table->foreign('packet_id')->references('id')->on('packets')->onDelete('cascade');
         });
     }
 

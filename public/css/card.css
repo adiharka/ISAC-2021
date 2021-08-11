@@ -55,6 +55,7 @@ button:hover.card1 {
     z-index: 0;
     overflow: hidden;
 }
+
 .card1:before {
     content: "";
     position: absolute;
@@ -79,6 +80,30 @@ button:hover.card1 {
 .card1:hover h3 {
     transition: all 0.3s ease-out;
     color: #fff;
+}
+
+.card1.ongoing {
+    background: linear-gradient(to bottom left, #2aeeff, rgb(120, 174, 199), #76afe9, #2068af);
+}
+
+.card1.ongoing .go-corner {
+    background: #164f7e;
+}
+
+.card1.ongoing:before {
+    background: #164f7e;
+}
+
+.card1.done {
+    background: linear-gradient(to bottom left, #53da97, #60cf92, #35a367, #2e8c59);
+}
+
+.card1.done .go-corner {
+    background: #27793c;
+}
+
+.card1.done:before {
+    background: none;
 }
 
 

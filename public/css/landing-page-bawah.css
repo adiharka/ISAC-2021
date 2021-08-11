@@ -32,8 +32,9 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.faq-box h4{
-    font-size: 36px;
+.faq-box h3{
+    font-size: 24px;
+    line-height: unset;
 }
 
 .left-que{
@@ -184,6 +185,27 @@
 }
 /*Box Sponsor dan Medpar CSS End*/
 
+/* MEDIA PARTNER */
+.medpart {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0px 240px 50px 240px;
+    text-align: center;
+    justify-content: center;
+}
+
+.medpart .medpart-img {
+    display: block;
+    height: 50px;
+}
+
+.medpart .medpart-img img {
+    height: auto;
+    height: 100%;
+}
+
 /* CONTACT US */
 .user-card {
     margin-bottom: 1rem;
@@ -210,6 +232,10 @@
 @media screen and (max-width: 768px) {
     .tl-line-container {
         padding: 0 0.5rem;
+    }
+
+    .medpart {
+        padding: 10px 50px;
     }
 
     .faq-box h3,

@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    height: 100vh;
+    overflow-y: unset;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 8fr 5fr;
+    background: radial-gradient(91.55% 219.6% at 3.12% 11.9%, rgba(148, 26, 205, 0.5) 0%, rgba(148, 26, 205, 0) 50.37%, rgba(148, 26, 205, 0.5) 100%);
+    border: 5px solid rgba(148, 26, 205, 0.75);
+    border-radius: 32px;
+    max-width: 1283px;
+    margin: auto;
+    padding: 72px;
+    gap: 2rem;
+}
+
+.box h2{
+    padding: 0 0 20px 0;
+    margin-top: 0;
+}
+
+.containbox p{
+    padding-bottom: 175px;
+}
+
+.jumlah{
+    font-weight: bold;
+    padding:20px 0px;
+}
+
+.buttons1{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.btn-enter img{
+    padding-left: 10px;
+}
+
+.btn-enter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: .75rem;
+    width: 10rem;
+    height: 3.5rem;
+    color: #000021;
+    background-color: #FDD44B;
+    border-radius: 16px;
+    border: 0px;
+    margin-right: 20px;
+    position: static;
+    font-family: Montserrat;
+}
+
+.btn-enter:hover, .btn-enter.focus:focus{
+    background-color: #FDD44B;
+    color:black;
+    box-shadow: 0px 0px 15px#FDD44B;
+}
+
+.gradient {
+    background: -webkit-linear-gradient(right, #F13E86, #F3619C, #F89BC0, #c64aff, #7474FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.smallbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: #FDD44B solid;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: #000021;
+    /* margin: 30px; */
+    padding: 1rem;
+}
+
+.jumlahsoal{
+    padding-top: 10px;
+}
+
+.smallbox h2{
+    padding-top: 0px;
+}
+
+.buttons2{
+    display: none;
+}
+
+
+/* ga jadi Tablet */
+/*
+@media screen and (max-width: 1100px) {
+    .smallbox h2{
+        font-size: 35px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .containbox p{
+        padding-bottom: 130px;
+    }
+}
+
+/* Mobile & tablet */
+@media screen and (max-width: 800px) {
+    .box{
+        /* display: block; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+        border-radius: 0px;
+        padding: 1rem;
+        border: unset;
+    }
+
+    .box p,
+    .box a{
+        font-size: 14px;
+    }
+
+    .btn-enter {
+        width: 120px;
+        height: 40px;
+    }
+
+    a.btn-enter{
+        font-size: 1rem;
+    }
+
+    .containbox p{
+        padding: 0px;
+    }
+    .buttons1{
+        display: none;
+    }
+    .buttons2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-enter{
+        margin-right: 0px;
+        margin-bottom: 1.5rem;
+    }
+
+}

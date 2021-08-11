@@ -15,7 +15,75 @@
     <div class="card-body">
         @include('template.error')
         @if (Auth::user()->verified)
-        <h5>Terimasih telah mendaftar ISAC 2021, pantau terus timelinenya ya!</h5>
+            {{-- CEK OLIM / POSTER --}}
+            @if (Auth::user()->role == 'olim')
+            @foreach ($packets as $packet)
+                <a class="card1" href="{{ route('user.soal.attempt', $packet->id) }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                        <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                      </svg>
+                    <h4>{{ $packet->name }}</h4>
+                    <p class="small m-0">Status : Belum dikerjakan</p>
+                    <div class="dimmer"></div>
+                    <div class="go-corner" href="#">
+                        <div class="go-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
+                                <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
+                              </svg>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+            @include('template.countdown')
+            @foreach ($ongoings as $ongoing)
+            <a class="card1 ongoing" href="{{ route('user.soal.attempt', $ongoing->packet->id) }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                    <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  </svg>
+                <h4>Sisa : <span id="timer-{{ $loop->index }}" data-countdown="{{ $ongoing->end }}" data-id="{{ $ongoing->packet->id }}"></span></h4>
+                <script>
+                    el = 'timer-' + {!! json_encode($loop->index) !!};
+                    countDown(el);
+                </script>
+                <p class="small m-0">{{ $ongoing->packet->name }}</p>
+                <p class="small m-0">Status : Sedang berlangsung</p>
+                <div class="dimmer"></div>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                    </div>
+                </div>
+            </a>
+            @endforeach
+            @foreach ($finishedpackets as $finish)
+            <div class="card1 done">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  </svg>
+                <h4>{{ $finish->packet->name }}</h4>
+                <p class="small m-0">Status : Sudah dikerjakan</p>
+                <div class="dimmer"></div>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            @else
+            <h5>Terimasih telah mendaftar ISAC 2021, pantau terus timelinenya ya!</h5>
+
+            @endif
         @else
             <div class="card-group">
                 @if (!$lengkap)
@@ -115,7 +183,7 @@
                         <label for="payment_photo" class="form-label">Link Foto Bukti Transfer</label>
                         <input name="payment_photo" type="text" class="form-control" id="payment_photo"
                             value="{{ Auth::user()->payment_photo }}">
-                        <div id="photolinkHelp" class="form-text small">Pastikan hak akses sudah dibuka untuk umum agar
+                        <div id="photolinkHelp" class="form-text small">Format nama file : NamaBank_NamaTim. Pastikan hak akses sudah dibuka untuk umum agar
                             gambar dapat dilihat panitia</div>
                     </div>
                     <div class="modal-footer">

@@ -16,12 +16,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        DB::table('users')->insert([
-            'teamname' => 'admin',
-            'email' => 'admin@himsiunair.com',
-            'password' => hash::make('admin123'),
-            'role' => 'admin',
-            'active' => 0,
+        $this->call([
+            AdminSeeder::class,
+            SoalSeeder::class,
         ]);
     }
 }

@@ -16,12 +16,15 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('packet_id');
-            $table->integer('point');
+            $table->integer('point')->default(1);
+            $table->string('number');
             $table->string('question');
+            $table->boolean('imgAnswer')->default(0);
             $table->string('A');
             $table->string('B');
             $table->string('C');
             $table->string('D');
+            $table->string('img')->nullable();
             $table->string('right_answer', 1);
             $table->timestamps();
 
