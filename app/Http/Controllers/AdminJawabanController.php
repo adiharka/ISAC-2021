@@ -10,6 +10,10 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Session;
 
+use App\Exports\OlimExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 class AdminJawabanController extends Controller
 {
     public function index() {
@@ -37,4 +41,10 @@ class AdminJawabanController extends Controller
         $answers = Answer::where('packet_id', $id)->orderBy('question_id', 'asc')->get();
         return view('admin.jawaban.show', compact('packets', 'packet', 'users', 'best', 'bestUser', 'questions', 'takepackets', 'answers', 'id'));
     }
+
+    public function excel($id)
+	{
+        $packetName = "ISAC " . Packet::find($id)->name . ".xlsx";
+		return Excel::download(new OlimExport($id), $packetName);
+	}
 }

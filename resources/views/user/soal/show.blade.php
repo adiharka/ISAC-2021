@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/soal/show-question.css') }}">
 
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
+
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

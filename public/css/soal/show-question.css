@@ -147,6 +147,7 @@
           align-items: center;
   gap: 8px;
   overflow: unset;
+  font-family: poppins;
   border-radius: 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;

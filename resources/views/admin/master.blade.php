@@ -73,6 +73,7 @@
                                 </p>
                             </a>
                         </li>
+
                         {{-- TIM --}}
                         <li id="nav-tim" class="nav-item">
                             <a href="#" class="nav-link">
@@ -124,7 +125,18 @@
                             </ul>
                         </li>
                         {{-- PESERTA --}}
-                        <li id="nav-peserta" class="nav-item">
+                        <li class="nav-item">
+                            <a href="{{ route('memberlist') }}" class="nav-link" id="nav-peserta">
+                                <i class="nav-icon"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                  </svg>
+                                <p>
+                                    List Peserta
+                                </p>
+                            </a>
+                        </li>
+                        {{-- <li id="nav-peserta" class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon"></i>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -148,8 +160,22 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li> --}}
+
+                        {{-- POSTER --}}
+                        <li class="nav-item">
+                            <a href="{{ route('admin.poster.index')}}" class="nav-link" id="nav-poster">
+                                <i class="nav-icon"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-easel" viewBox="0 0 16 16">
+                                    <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0zM2 3v7h12V3H2z"/>
+                                  </svg>
+                                <p>
+                                    Poster
+                                </p>
+                            </a>
                         </li>
 
+                        {{-- OLYMPIAD --}}
                         {{-- SOAL --}}
                         <li id="nav-soal" class="nav-item">
                             <a href="#" class="nav-link">

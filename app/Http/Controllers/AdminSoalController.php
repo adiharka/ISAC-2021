@@ -35,8 +35,16 @@ class AdminSoalController extends Controller
             'duration' => 'required',
         ]);
 
+        if ($request->visible == 'on') {
+            $visible = 1;
+        } else {
+            $visible = 0;
+        }
+
+
         $paket = Packet::find($id);
         $paket->name = $request->name;
+        $paket->visible = $visible;
         $paket->detail = $request->detail;
         $paket->question_count = $request->question_count;
         $paket->open = $request->open;
@@ -96,7 +104,7 @@ class AdminSoalController extends Controller
                 }
             }
             $takepacket->mark = $mark;
-            $takepacket->save();
+            $takepacket->save(['timestamps' => false]);
         }
 
         return redirect()->route('admin.soal.show', $id)->with('success', 'Sukses kalkulasi ulang');

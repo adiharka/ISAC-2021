@@ -157,7 +157,7 @@
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <a href="http://bit.ly/PosterISAC2021"><button class="btn-submit focus">Download</button></a>
+                            <a href="http://bit.ly/PosterISAC2021" target="_blank"><button class="btn-submit focus">Download</button></a>
                         </div>
                         <div class="desc-box">
                             <h3>Creative Poster</h3>
@@ -206,7 +206,7 @@
                         <div class="download-box guide">
                             <h4>GUIDE BOOK</h4>
                             <img src="{{ asset('img/landing-login-register/file.png') }}" alt="">
-                            <a href="http://bit.ly/OlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
+                            <a href="http://bit.ly/OlympiadISAC2021" target="_blank"><button class="btn-submit focus">Download</button></a>
                         </div>
                         {{-- <div class="download-box soal">
                             <h4>LATIHAN SOAL</h4>
@@ -252,7 +252,7 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <a href="http://bit.ly/PosterISAC2021"><button class="btn-submit focus">Download</button></a>
+                                <a href="http://bit.ly/PosterISAC2021" target="_blank"><button class="btn-submit focus">Download</button></a>
                             </div>
 
                         </div>
@@ -291,7 +291,7 @@
                         <div class="downloads">
                             <div class="download-box guide">
                                 <h4>GUIDE BOOK</h4>
-                                <a href="http://bit.ly/OlympiadISAC2021"><button class="btn-submit focus">Download</button></a>
+                                <a href="http://bit.ly/OlympiadISAC2021" target="_blank"><button class="btn-submit focus">Download</button></a>
                             </div>
                             {{-- <div class="download-box soal">
                                 <h4>LATIHAN SOAL</h4>

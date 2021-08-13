@@ -230,3 +230,10 @@ button:hover.card1 {
     margin: 0.5rem;
 
 }
+
+.filename {
+    font-family: monospace;
+    background: rgba(178, 178, 178, 0.229);
+    border-radius: 2px;
+    font-size: 13px;
+}

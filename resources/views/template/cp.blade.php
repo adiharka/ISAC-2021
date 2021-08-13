@@ -1,7 +1,7 @@
 <div>
     <div class="card user-card">
         <h3 style="margin:0">Sulthan</h3>
-        <h6>Kontak Olimpiade</h6>
+        <h6>Kontak Olympiad</h6>
         <div class="profile-card">
             <a href="http://wa.me/6282378547133">
                 <div class="card-whatsapp">
@@ -36,7 +36,7 @@
     </div>
     <div class="card user-card">
         <h3 style="margin:0">Ayuni</h3>
-        <h6>Kontak Poster</h6>
+        <h6>Kontak Creative Poster</h6>
         <div class="profile-card">
             <a href="http://wa.me/628115001771">
                 <div class="card-whatsapp">

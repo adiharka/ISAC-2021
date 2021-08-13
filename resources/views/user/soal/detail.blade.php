@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISAC 2021</title>
 
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
+
     <!-- Style -->
     <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/soal/confirmtest.css') }}">
@@ -19,18 +22,29 @@ rel="stylesheet">
 <body>
     <div class="box">
         <div class="containbox">
+            @if(session('errors'))
+                <div class="card" role="alert">
+                    <ul>
+                        @foreach($errors as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <h2 class="judul">{{ $packet->name }}</h2>
             <p class="keterangan">{{ $packet->detail }}</p>
             <div class="buttons1">
-                @if ($opened)
+                @if ($status == "open")
                 <a href="{{ route('user.soal.take', $id) }}" class="btn-enter">Mulai
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
                       </svg>
                 </a>
 
+                @elseif ($status == "notyet")
+                <h4>Soal belum dibuka</h4>
                 @else
-                <p>Soal belum dibuka, mohon tunggu hingga waktunya</p>
+                <h4>Soal telah ditutup</h4>
                 @endif
                 <a href="{{ route('user.index') }}">Kembali</a>
             </div>
@@ -47,15 +61,17 @@ rel="stylesheet">
             </div>
         </div>
         <div class="buttons2">
-            @if ($opened)
+            @if ($status == "open")
                 <a href="{{ route('user.soal.take', $id) }}" class="btn-enter">Mulai
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
                       </svg>
                 </a>
 
+                @elseif ($status == "notyet")
+                <h4>Soal belum dibuka</h4>
                 @else
-                <p>Soal belum dibuka, mohon tunggu hingga waktunya</p>
+                <h4>Soal telah ditutup</h4>
                 @endif
                 <a href="{{ route('user.index') }}">Kembali</a>
         </div>

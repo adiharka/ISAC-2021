@@ -100,7 +100,7 @@ class AuthController extends Controller
             'password.required'     => 'Password wajib diisi',
             'password.confirmed'    => 'Password tidak sama dengan konfirmasi password',
             'name.required'         => 'Nama ketua wajib diisi',
-            'whatsapp.required'         => 'Nomor whatsapp wajib diisi',
+            'whatsapp.required'     => 'Nomor whatsapp wajib diisi',
         ];
 
         $validator1 = Validator::make($request->all(), $rules, $messages);

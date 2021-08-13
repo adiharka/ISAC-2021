@@ -107,6 +107,18 @@
                         <input name="name" type="text" value="{{ $packet->name }}" class="form-control">
                     </div>
                     <div class="mb-3">
+                        {{-- <div class="custom-control custom-checkbox">
+                            <input name="visible" class="custom-control-input" type="checkbox" id="visible" {{ $packet->visible ? "checked" : "" }}>
+                            <label for="visible" class="custom-control-label">Custom Checkbox</label>
+                          </div> --}}
+                        <div class="form-group">
+                            <div class="custom-control custom-switch">
+                              <input type="checkbox" name="visible" class="custom-control-input" id="visible"  {{ $packet->visible ? "checked" : "" }}>
+                              <label class="custom-control-label" for="visible">Dapat dilihat peserta</label>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="mb-3">
                         <label for="detail" class="form-label">Detail Soal</label>
                         <textarea class="form-control"  name="detail" id="detail" cols="30" rows="5">{{ $packet->detail }}</textarea>
                      </div>

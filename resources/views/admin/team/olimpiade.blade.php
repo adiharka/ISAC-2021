@@ -55,12 +55,14 @@
                 @forelse ($team as $team)
                 <tr>
                     <td>{{ $team->id }}</td>
-                    <td>{{ $team->teamname }}
-                    @if ($team->verified)
-                    ☑
-                    @else
-                    ❌
-                    @endif
+                    <td><a  href="{{ route('teamdetail', ['id' => $team->id])}}">
+                        {{ $team->teamname }}
+                            @if ($team->verified)
+                            ☑
+                            @else
+                            ❌
+                            @endif
+                        </a>
                     </td>
                     <td>{{ $team->school }}</td>
                     <td>{{ $team->school }}</td>

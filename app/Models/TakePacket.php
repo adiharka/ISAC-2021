@@ -10,6 +10,8 @@ class TakePacket extends Model
     use HasFactory;
     const CREATED_AT = 'start';
 
+    protected $fillable = ['packet_id','question_order','mark'];
+
     public function packet()
     {
         return $this->belongsTo(Packet::class);
@@ -17,7 +19,7 @@ class TakePacket extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function answer()

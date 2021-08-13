@@ -27,13 +27,16 @@ class HomeController extends Controller
             $bayar = 0;
         }
 
+        // POSTER
+        $deadline = Carbon::createFromFormat('d/m/Y H:i:s', '19/09/2021 23:59:00');
+
         // OLIM
         $attempt = TakePacket::where('user_id', Auth::id())->get();
         $plucked = $attempt->pluck('packet_id');
-        $packets = Packet::whereNotIn('id', $plucked->all())->get();
+        $packets = Packet::whereNotIn('id', $plucked->all())->where('visible', 1)->get();
         $ongoings = TakePacket::where('user_id', Auth::id())->where('finished', 0)->get();
         $finishedpackets = TakePacket::where('user_id', Auth::id())->where('finished', 1)->get();
 
-        return view('user.index', compact('members', 'lengkap', 'bayar', 'packets', 'ongoings', 'finishedpackets'));
+        return view('user.index', compact('members', 'lengkap', 'bayar', 'packets', 'ongoings', 'finishedpackets', 'deadline'));
     }
 }

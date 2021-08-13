@@ -6,13 +6,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SoalController;
+use App\Http\Controllers\PosterController;
 // Admin
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\AdminPosterController;
 use App\Http\Controllers\AdminSoalController;
 use App\Http\Controllers\AdminJawabanController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -52,8 +53,12 @@ Route::middleware('auth')->group(function () {
         Route::get('tim/detail/{id}', [TeamController::class, 'detail'])->name('teamdetail');
         Route::put('tim/verifikasi/{id}', [TeamController::class, 'verifikasi'])->name('admin.verifikasi');
 
+        // POSTER
+        Route::get('poster', [AdminPosterController::class, 'index'])->name('admin.poster.index');
+        Route::get('excel', [AdminPosterController::class, 'excel'])->name('admin.poster.excel');
+
+        // OLYMPIAD
         // SOAL
-        // Route::get('jawaban', [AdminSoalController::class, 'index'])->name('admin.jawaban.index');
         Route::get('soal', [AdminSoalController::class, 'index'])->name('admin.soal.index');
         Route::get('soal/{id}', [AdminSoalController::class, 'show'])->name('admin.soal.show');
         Route::put('soal/{id}', [AdminSoalController::class, 'edit'])->name('admin.soal.edit');
@@ -62,6 +67,7 @@ Route::middleware('auth')->group(function () {
         // JAWABAN
         Route::get('jawaban', [AdminJawabanController::class, 'index'])->name('admin.answer.index');
         Route::get('jawaban/{id}', [AdminJawabanController::class, 'show'])->name('admin.answer.show');
+        Route::get('excel/{id}', [AdminJawabanController::class, 'excel'])->name('admin.answer.excel');
 
         Route::get('home', function () {
             return redirect()->route('dashboard');
@@ -78,7 +84,10 @@ Route::middleware('auth')->group(function () {
         Route::post('password', [AkunController::class, 'changePass'])->name('user.akun.updatePassword');
         Route::put('bayar', [AkunController::class, 'bayar'])->name('user.akun.bayar');
 
-        // SOAL
+        // POSTER
+        Route::put('poster', [PosterController::class, 'edit'])->name('user.poster.edit');
+
+        // OLIM
         Route::get('attempt/{id}', [SoalController::class, 'attempt'])->name('user.soal.attempt');
         Route::get('detail/{id}', [SoalController::class, 'detail'])->name('user.soal.detail');
         Route::get('take/{id}', [SoalController::class, 'take'])->name('user.soal.take');

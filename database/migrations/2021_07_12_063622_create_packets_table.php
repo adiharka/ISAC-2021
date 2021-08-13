@@ -16,6 +16,7 @@ class CreatePacketsTable extends Migration
         Schema::create('packets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->boolean('visible')->default(0);
             $table->string('detail')->nullable();
             $table->tinyInteger('question_count')->nullable();
             $table->dateTime('open')->nullable();

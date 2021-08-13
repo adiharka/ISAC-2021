@@ -4,6 +4,15 @@ body {
     overflow-y: unset;
 }
 
+.card {
+    background-color: rgba(85, 85, 85, 0.569);
+    border-radius: 1rem;
+    border: 2px rgba(226, 114, 114, 0.653) solid;
+    padding: 1rem;
+    font-family: Montserrat;
+    color: white;
+}
+
 .box{
     display: grid;
     grid-template-columns: 8fr 5fr;
