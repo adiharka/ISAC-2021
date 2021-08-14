@@ -73,9 +73,9 @@ class SoalController extends Controller
                 $save = $take->save();
 
                 // Job untuk auto finish attempt klo waktu habis
-                $takeid = $take->id;
-                $job = (new SetPacketFinished($takeid))->delay(Carbon::now()->addMinutes($packet->duration));
-                dispatch($job);
+                // $takeid = $take->id;
+                // $job = (new SetPacketFinished($takeid))->delay(Carbon::now()->addMinutes($packet->duration));
+                // dispatch($job);
 
                 // Membuat slot jawaban
                 for ($i=0; $i < $packet->question_count; $i++) {
@@ -128,7 +128,7 @@ class SoalController extends Controller
                 return view('user.soal.show', compact('answers', 'currentQuestion', 'currentAnswer', 'id', 'no', 'time'));
             }
             // KALO WAKTU ABIS BAKAL UBAH STATUS JADI FINISHED
-            if (Carbon::now() >= $packet_status->end) {
+            elseif (Carbon::now() >= $packet_status->end) {
                 return redirect()->route('user.soal.end', $id);
             }
             else {
