@@ -167,6 +167,25 @@ class SoalController extends Controller
 
         $info = "Terima kasih telah mengerjakan soal";
         Session::flash('success', $info);
+        // return redirect()->route('user.index');
+        return view('user.soal.saran', compact('id'));
+    }
+
+    public function saran(Request $request, $id)
+    {
+        $takepacket = TakePacket::where('user_id', Auth::id())->where('packet_id', $id)->first();
+        $takepacket->saran = $request->saran;
+        $takepacket->save();
+
+        $log = new Log;
+        $log->user_id = Auth::id();
+        $log->target_id = Auth::id();
+        $log->event = 'Memberi saran ' . Packet::find($id)->name;
+        $log->type = 2;
+        $log->save();
+
+        $info = "Terima kasih telah memberi saran";
+        Session::flash('success', $info);
         return redirect()->route('user.index');
     }
 }

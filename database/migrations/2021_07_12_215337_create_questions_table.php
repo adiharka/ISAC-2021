@@ -24,6 +24,7 @@ class CreateQuestionsTable extends Migration
             $table->string('B');
             $table->string('C');
             $table->string('D');
+            $table->string('E');
             $table->string('img')->nullable();
             $table->string('right_answer', 1);
             $table->timestamps();

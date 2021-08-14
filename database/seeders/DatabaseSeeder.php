@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             SoalSeeder::class,
         ]);
+        \App\Models\User::factory(200)->create();
     }
 }

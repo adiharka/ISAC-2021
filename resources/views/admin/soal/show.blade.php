@@ -79,6 +79,7 @@
                         <div id="accordion{{ $soal->id }}" class="collapse">B. {{ $soal->B }}</div>
                         <div id="accordion{{ $soal->id }}" class="collapse">C. {{ $soal->C }}</div>
                         <div id="accordion{{ $soal->id }}" class="collapse">D. {{ $soal->D }}</div>
+                        <div id="accordion{{ $soal->id }}" class="collapse">E. {{ $soal->E }}</div>
                     </td>
                 </tr>
                 @endforeach

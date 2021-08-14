@@ -92,6 +92,7 @@ Route::middleware('auth')->group(function () {
         Route::get('detail/{id}', [SoalController::class, 'detail'])->name('user.soal.detail');
         Route::get('take/{id}', [SoalController::class, 'take'])->name('user.soal.take');
         Route::get('end/{id}', [SoalController::class, 'end'])->name('user.soal.end');
+        Route::post('saran/{id}', [SoalController::class, 'saran'])->name('user.saran');
         Route::get('attempt/{id}/{no}', [SoalController::class, 'show'])->name('user.soal.show');
         Route::put('attempt/{id}/{update}/{show}', [SoalController::class, 'update'])->name('user.soal.update');
 

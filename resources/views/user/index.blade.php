@@ -197,7 +197,7 @@
             @endif
         @endif
 
-        <p>Follow Instagram Kami : <a href="http://instagram.com/isac_unair" target="_blank">ISAC 2021</a></p>
+        <p style="margin-left: 1rem">Follow Instagram Kami : <a href="http://instagram.com/isac_unair" target="_blank">ISAC 2021</a></p>
     </div>
 
 </div>

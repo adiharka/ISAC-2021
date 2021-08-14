@@ -148,10 +148,13 @@
                                 <span data-hover="D">D</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->D) }}" for="D"></img><br>
                             </label>
-                            {{-- <input {{ ($currentAnswer->answer=="D")? "checked" : "" }} type="radio" id="D" name="answer" value="D">
-                            <label for="D">D
-                                <img src="{{ asset('img/packet/' .$currentQuestion->D) }}" for="D"></img><br>
-                            </label> --}}
+                        </div>
+                        <div>
+                            <input {{ ($currentAnswer->answer=="E")? "checked" : "" }} class="checkbox-budget" type="radio" value="E" name="answer" id="E">
+                            <label class="for-checkbox-budget" for="E">
+                                <span data-hover="E">E</span>
+                                <img src="{{ asset('img/packet/' .$currentQuestion->E) }}" for="E"></img><br>
+                            </label>
                         </div>
                         @else
                         <div>
@@ -194,10 +197,13 @@
                                 <span data-hover="D">D</span>
                                 <h4>{{ $currentQuestion->D }}</h4>
                             </label>
-                            {{-- <input {{ ($currentAnswer->answer=="D")? "checked" : "" }} type="radio" id="D" name="answer" value="D">
-                            <label for="D">
-                                <h4>D {{ $currentQuestion->D }}</h4>
-                            </label><br> --}}
+                        </div>
+                        <div>
+                            <input {{ ($currentAnswer->answer=="E")? "checked" : "" }} class="checkbox-budget" type="radio" value="E" name="answer" id="E">
+                            <label class="for-checkbox-budget" for="E">
+                                <span data-hover="E">E</span>
+                                <h4>{{ $currentQuestion->E }}</h4>
+                            </label>
                         </div>
                         @endif
 
@@ -243,9 +249,7 @@
                                     </button>
                                     <a href="{{ route('user.soal.end', $id) }}" class="btn btn-primary"><img src="{{ asset('svg/soal/done.svg') }}" alt="">
                                         Akhiri</a>
-                                    {{-- <button type="button" class="btn btn-primary">
-                                        <img src="{{ asset('svg/soal/done.svg') }}" alt=""> Akhiri
-                                    </button> --}}
+
                                 </div>
                             </div>
                         </div>
