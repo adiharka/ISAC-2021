@@ -895,7 +895,7 @@
     margin: 1rem 0 !important;
   }
   .left #answer img {
-    max-width: 400px;
+    max-width: 320px;
   }
   .left .options {
     gap: 8px;
@@ -939,7 +939,7 @@
     padding: 1rem;
   }
   .left #answer img {
-    max-width: 300px;
+    max-width: 225px;
     width: -webkit-fill-available;
   }
   .left h4 {

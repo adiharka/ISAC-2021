@@ -113,7 +113,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="A")? "checked" : "" }} class="checkbox-budget" type="radio" value="A" name="answer" id="A">
                             <label class="for-checkbox-budget" for="A">
-                                <span data-hover="A">A</span>
+                                <span data-hover="A.">A.</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->A) }}" for="A"></img><br>
                             </label>
                             {{-- <input {{ ($currentAnswer->answer=="A")? "checked" : "" }} type="radio" id="A" name="answer" value="A">
@@ -123,7 +123,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="B")? "checked" : "" }} class="checkbox-budget" type="radio" value="B" name="answer" id="B">
                             <label class="for-checkbox-budget" for="B">
-                                <span data-hover="B">B</span>
+                                <span data-hover="B.">B.</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->B) }}" for="B"></img><br>
                             </label>
                             {{-- <input {{ ($currentAnswer->answer=="B")? "checked" : "" }} type="radio" id="B" name="answer" value="B">
@@ -134,7 +134,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="C")? "checked" : "" }} class="checkbox-budget" type="radio" value="C" name="answer" id="C">
                             <label class="for-checkbox-budget" for="C">
-                                <span data-hover="C">C</span>
+                                <span data-hover="C.">C.</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->C) }}" for="C"></img><br>
                             </label>
                             {{-- <input {{ ($currentAnswer->answer=="C")? "checked" : "" }} type="radio" id="C" name="answer" value="C">
@@ -145,14 +145,14 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="D")? "checked" : "" }} class="checkbox-budget" type="radio" value="D" name="answer" id="D">
                             <label class="for-checkbox-budget" for="D">
-                                <span data-hover="D">D</span>
+                                <span data-hover="D.">D.</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->D) }}" for="D"></img><br>
                             </label>
                         </div>
                         <div>
                             <input {{ ($currentAnswer->answer=="E")? "checked" : "" }} class="checkbox-budget" type="radio" value="E" name="answer" id="E">
                             <label class="for-checkbox-budget" for="E">
-                                <span data-hover="E">E</span>
+                                <span data-hover="E.">E.</span>
                                 <img src="{{ asset('img/packet/' .$currentQuestion->E) }}" for="E"></img><br>
                             </label>
                         </div>
@@ -160,7 +160,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="A")? "checked" : "" }} class="checkbox-budget" type="radio" value="A" name="answer" id="A">
                             <label class="for-checkbox-budget" for="A">
-                                <span data-hover="A">A</span>
+                                <span data-hover="A.">A.</span>
                                 <h4>{{ $currentQuestion->A }}</h4>
                             </label>
 
@@ -172,7 +172,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="B")? "checked" : "" }} class="checkbox-budget" type="radio" value="B" name="answer" id="B">
                             <label class="for-checkbox-budget" for="B">
-                                <span data-hover="B">B</span>
+                                <span data-hover="B.">B.</span>
                                 <h4>{{ $currentQuestion->B }}</h4>
                             </label>
                             {{-- <input {{ ($currentAnswer->answer=="B")? "checked" : "" }} type="radio" id="B" name="answer" value="B">
@@ -183,7 +183,7 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="C")? "checked" : "" }} class="checkbox-budget" type="radio" value="C" name="answer" id="C">
                             <label class="for-checkbox-budget" for="C">
-                                <span data-hover="C">C</span>
+                                <span data-hover="C.">C.</span>
                                 <h4>{{ $currentQuestion->C }}</h4>
                             </label>
                             {{-- <input {{ ($currentAnswer->answer=="C")? "checked" : "" }} type="radio" id="C" name="answer" value="C">
@@ -194,14 +194,14 @@
                         <div>
                             <input {{ ($currentAnswer->answer=="D")? "checked" : "" }} class="checkbox-budget" type="radio" value="D" name="answer" id="D">
                             <label class="for-checkbox-budget" for="D">
-                                <span data-hover="D">D</span>
+                                <span data-hover="D.">D.</span>
                                 <h4>{{ $currentQuestion->D }}</h4>
                             </label>
                         </div>
                         <div>
                             <input {{ ($currentAnswer->answer=="E")? "checked" : "" }} class="checkbox-budget" type="radio" value="E" name="answer" id="E">
                             <label class="for-checkbox-budget" for="E">
-                                <span data-hover="E">E</span>
+                                <span data-hover="E.">E.</span>
                                 <h4>{{ $currentQuestion->E }}</h4>
                             </label>
                         </div>

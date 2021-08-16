@@ -104,7 +104,8 @@ class AdminSoalController extends Controller
                 }
             }
             $takepacket->mark = $mark;
-            $takepacket->save(['timestamps' => false]);
+            $takepacket->timestamps = false;
+            $takepacket->save();
         }
 
         return redirect()->route('admin.soal.show', $id)->with('success', 'Sukses kalkulasi ulang');

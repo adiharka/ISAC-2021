@@ -167,8 +167,8 @@ class SoalController extends Controller
 
         $info = "Terima kasih telah mengerjakan soal";
         Session::flash('success', $info);
-        // return redirect()->route('user.index');
-        return view('user.soal.saran', compact('id'));
+        return redirect()->route('user.index');
+        // return view('user.soal.saran', compact('id'));
     }
 
     public function saran(Request $request, $id)
