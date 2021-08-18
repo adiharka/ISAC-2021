@@ -43,7 +43,10 @@
                 }
             });
         }
-
+        function credit() {
+            let id = document.getElementById('credit');
+            id.innerHTML = "Created by Andi Mahardika, Rafid Nagara, Oxy Septya, Daffa Permadi, Nyoman Arya, Annisa Putri"
+        }
     </script>
 </head>
 
@@ -473,7 +476,7 @@
     <!-- Timeline end -->
 
     <!-- Box Sponsor dan Medpar -->
-    <div class="sponsor">
+    <div class="">
         <div class="bintang">
             {{-- <img src="{{ asset('img/landing-login-register/bintang.png') }}"> --}}
             <picture>
@@ -481,7 +484,17 @@
                 <img src="{{ asset('img/landing-login-register/bintang-sm.png') }}" alt="Baby Sleeping" />
             </picture>
         </div>
+        {{-- SPONSOR --}}
         <div class="title">
+            <h2 class="gradient">Sponsor</h2>
+        </div>
+        <div class="sponsor">
+            <div class="sponsor-img">
+                <img src="{{ asset('img/landing-login-register/sponsor/RedDoorz.jpeg')}}" alt="RedDoorz">
+            </div>
+        </div>
+        {{-- MEDPART --}}
+        <div class="title" style="margin-top: 2rem">
             <h2 class="gradient">Media Partner</h2>
         </div>
         <div class="medpart">
@@ -512,6 +525,18 @@
             <div class="medpart-img">
                 <img src="{{ asset('img/landing-login-register/mediapartner/BemFST.png')}}" alt="BEM FST">
             </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/infoolimpiade.png')}}" alt="Info Olimpiade">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/infoeventjatim.png')}}" alt="Info Event Jatim">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/info_olimpiade.jpg')}}" alt="Info Olimpiade">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/MathQnA.jpg')}}" alt="Math QnA">
+            </div>
         </div>
         <div class="bintang">
             <img src="{{ asset('img/landing-login-register/Border.png') }}">
@@ -524,85 +549,10 @@
         </div>
         <br>
         <br>
-        <p>© Copyright ISAC 2021. All Rights Reserved</p>
+        <p onclick="credit()" id="credit">© Copyright ISAC 2021. All Rights Reserved</p>
         <br>
     </div>
     <!-- Box Sponsor dan Medpar End -->
-
-    <!-- Timeline -->
-    <!-- <div class="divider square">
-                <div class="timeline">
-                    <h2 class="gradient">TIMELINE</h2>
-                </div>
-                <div>
-                    <img src="assets/img/square.png">
-                </div>
-            </div>
-
-            <div class="tl-line-container">
-                <div class="tl-line right">
-            <div>
-            </div>
-            <div>
-                <img src="assets/img/square1.png">
-            </div>
-            <div class="tl-desc right">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
-            </div>
-        </div>
-        <div class="tl-line left">
-            <div class="tl-desc left">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
-            </div>
-            <div>
-                <img src="assets/img/square2.png">
-            </div>
-            <div>
-            </div>
-        </div>
-        <div class="tl-line right">
-            <div>
-            </div>
-            <div>
-                <img src="assets/img/square3.png">
-            </div>
-            <div class="tl-desc right">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
-            </div>
-        </div>
-        <div class="tl-line left">
-            <div class="tl-desc left">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
-            </div>
-            <div>
-                <img src="assets/img/square4.png">
-            </div>
-            <div>
-            </div>
-        </div>
-        <div class="tl-line right">
-            <div>
-            </div>
-            <div>
-                <img src="assets/img/square5.png">
-            </div>
-            <div class="tl-desc right">
-                <h3>Timeline 1</h3>
-                <p>03 Juni 2021</p>
-            </div>
-        </div>
-    </div> -->
-    <!-- Timeline end -->
-
-    <!-- Sponsor -->
-    <!-- Sponsor end -->
-
-    <!-- Medpart -->
-    <!-- Medpart end -->
 
     <!-- Footer -->
     <!-- Footer end -->
