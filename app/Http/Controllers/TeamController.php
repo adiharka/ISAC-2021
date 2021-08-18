@@ -19,22 +19,28 @@ class TeamController extends Controller
     public function teamlist()
     {
         $team = User::where('role', '!=', 'admin')->get();
+        $unverified = User::where('role', '!=', 'admin')->where('verified', 0)->count();
+        $verified = User::where('role', '!=', 'admin')->where('verified', 1)->count();
         $packets = Packet::get();
-        return view('admin.team.index', compact('team', 'packets'));
+        return view('admin.team.index', compact('team', 'packets', 'unverified', 'verified'));
     }
 
     public function olimpiade()
     {
         $team = User::where('role', 'olim')->get();
+        $unverified = User::where('role', 'olim')->where('verified', 0)->count();
+        $verified = User::where('role', 'olim')->where('verified', 1)->count();
         $packets = Packet::get();
-        return view('admin.team.olimpiade', compact('team', 'packets'));
+        return view('admin.team.olimpiade', compact('team', 'packets', 'unverified', 'verified'));
     }
 
     public function poster()
     {
         $team = User::where('role', 'poster')->get();
+        $unverified = User::where('role', 'poster')->where('verified', 0)->count();
+        $verified = User::where('role', 'poster')->where('verified', 1)->count();
         $packets = Packet::get();
-        return view('admin.team.poster', compact('team', 'packets'));
+        return view('admin.team.poster', compact('team', 'packets', 'unverified', 'verified'));
     }
 
     public function detail($id)

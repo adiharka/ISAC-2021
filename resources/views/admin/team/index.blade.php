@@ -10,12 +10,11 @@
 
 <div class="row mb-2">
     <div class="col-sm-6">
-        <h1 class="m-0 text-dark">List Tim</h1>
+        <h1 class="m-0 text-dark">List Semua Tim</h1>
     </div><!-- /.col -->
     <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Team</li>
+            <li class="breadcrumb-item active">List Tim</li>
         </ol>
     </div><!-- /.col -->
 </div><!-- /.row -->
@@ -23,6 +22,32 @@
 
 
 @section('content')
+<div class="row">
+    <div class="card mx-2">
+        <div class="card-header">
+            <h5 class="m-0">Total Tim</h5>
+        </div>
+        <div class="card-body">
+            <h3 class="">{{ $team->count() }}</h3>
+        </div>
+    </div>
+    <div class="card mx-2">
+        <div class="card-header">
+            <h5 class="m-0">Terverifikasi</h5>
+        </div>
+        <div class="card-body">
+            <h3 class="">{{ $verified }}</h3>
+        </div>
+    </div>
+    <div class="card mx-2">
+        <div class="card-header">
+            <h5 class="m-0">Belum Terverif</h5>
+        </div>
+        <div class="card-body">
+            <h3 class="">{{ $unverified }}</h3>
+        </div>
+    </div>
+</div>
 <div class="card">
     <div class="card-header">
         {{-- <h3 class="card-title">Responsive Hover Table</h3> --}}

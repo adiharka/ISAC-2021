@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ $team->id }}</td>
                 <td>{{ $team->teamname }}</td>
-                <td><a href="{{ $team->poster_link }}">{{ $team->poster_link }}</a></td>
+                <td>{{ $team->poster_link }}</td>
             </tr>
             @endforeach
         </tbody>

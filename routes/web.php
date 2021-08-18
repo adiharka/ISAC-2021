@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
 
         // PESERTA
         Route::get('peserta', [MemberController::class, 'memberlist'])->name('memberlist');
+        Route::get('excelmember', [MemberController::class, 'excel'])->name('admin.member.excel');
         // Route::get('peserta/olimpiade', [MemberController::class, 'olimpiade'])->name('admin.member.olimpiade.index');
         // Route::get('peserta/poster', [MemberController::class, 'poster'])->name('admin.member.poster.index');
 
@@ -55,7 +56,7 @@ Route::middleware('auth')->group(function () {
 
         // POSTER
         Route::get('poster', [AdminPosterController::class, 'index'])->name('admin.poster.index');
-        Route::get('excel', [AdminPosterController::class, 'excel'])->name('admin.poster.excel');
+        Route::get('excelposter', [AdminPosterController::class, 'excel'])->name('admin.poster.excel');
 
         // OLYMPIAD
         // SOAL
@@ -67,7 +68,7 @@ Route::middleware('auth')->group(function () {
         // JAWABAN
         Route::get('jawaban', [AdminJawabanController::class, 'index'])->name('admin.answer.index');
         Route::get('jawaban/{id}', [AdminJawabanController::class, 'show'])->name('admin.answer.show');
-        Route::get('excel/{id}', [AdminJawabanController::class, 'excel'])->name('admin.answer.excel');
+        Route::get('exceljawaban/{id}', [AdminJawabanController::class, 'excel'])->name('admin.answer.excel');
 
         Route::get('home', function () {
             return redirect()->route('dashboard');

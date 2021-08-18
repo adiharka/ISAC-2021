@@ -69,7 +69,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td>Masih kosong, ayok semangat publikasinya :D</td>
+                    <td>Belum ada paket soal</td>
                 </tr>
                 @endforelse
 
