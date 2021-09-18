@@ -18,7 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->unsignedBigInteger('packet_id');
             $table->integer('point')->default(1);
             $table->string('number');
-            $table->string('question');
+            $table->string('question', 1200);
             $table->boolean('imgAnswer')->default(0);
             $table->string('A');
             $table->string('B');

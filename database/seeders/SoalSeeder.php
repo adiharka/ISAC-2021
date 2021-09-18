@@ -17,65 +17,68 @@ class SoalSeeder extends Seeder
     public function run()
     {
         $packet_id = DB::table('packets')->insertGetId([
-            'name' => 'Paket Soal A',
-            'detail' => 'Babak penyisihan akan diberikan soal dalam bentuk Multiple Choice Question (MCQ) dengan durasi pengerjaan 100 menit. Metode penilaian menggunakan sistem Item Response Theory (IRT).',
-            'question_count' => 6,
+            //Nama Paket soal
+            'name' => 'Soal Uji Coba',
+            //Deskripsi
+            'detail' => 'Soal ini adalah paket soal yang disediakan oleh panitia ISAC 2021 agar kalian bisa mencoba mekanisme pengerjaan soal di web. Hasil dari jawaban kalian tidak akan mempengaruhi penilaian apapun dalam penyisihan',
+            //Banyak soal
+            'question_count' => 5,
             'open' => Carbon::now()->format('Y-m-d H:i:s'),
             'close' => Carbon::now()->addHours(5)->format('Y-m-d H:i:s'),
-            'duration' => '5',
-            // dlm menit
+            // Durasi dlm menit
+            'duration' => '60',
         ]);
 
 
         DB::table('questions')->insert([
             'packet_id' => $packet_id,
             'number' => '1',
-            'question' => 'Makasi udh nyoba websitenya, bebas mau diisi bener apa gak. Jawabannya A',
-            'A' => 'Bombardir',
-            'B' => 'Nuklir',
-            'C' => 'Takbir',
-            'D' => 'Bombay',
-            'E' => 'Tahu',
+            'question' => 'Siapa nama panjang Einstein',
+            'A' => 'Albert Einstein',
+            'B' => 'Budi Einstein',
+            'C' => 'Rahmat Einstein',
+            'D' => 'Einstein Santoso',
+            'E' => 'Einstein Slamet',
             'right_answer' => 'A',
         ]);
 
         DB::table('questions')->insert([
             'packet_id' => $packet_id,
             'number' => '2',
-            'question' => 'Contoh soal yg pake gambar, nyaman nggak nih pakeknya',
-            'img' => '1.jpeg',
-            'A' => 'Rusa',
-            'B' => 'Singa',
-            'C' => 'Macan',
-            'D' => 'Kucing',
-            'E' => 'Angsa',
+            'question' => 'Orang pada gambar sedang ngapain?',
+            'img' => 'trial/2.jpg',
+            'A' => 'Cosplay Kura-kura',
+            'B' => 'Menyatu dengan lantai',
+            'C' => 'Gabut',
+            'D' => 'Mencari kitab suci',
+            'E' => 'Tiarap',
             'right_answer' => 'A',
         ]);
 
         DB::table('questions')->insert([
             'packet_id' => $packet_id,
             'number' => '3',
-            'question' => 'Ini contoh soal yang pilgannya gambar. Nyaman nggak diliatnya??',
+            'question' => 'Mana foto Jokowi?',
             'imgAnswer' => 1,
-            'A' => '2A.jpg',
-            'B' => '2B.jpg',
-            'C' => '2C.jpg',
-            'D' => '2D.jpg',
-            'E' => '2A.jpg',
-            'right_answer' => 'C',
+            'A' => 'trial/3A.jpg',
+            'B' => 'trial/3B.jpg',
+            'C' => 'trial/3C.jpg',
+            'D' => 'trial/3D.jpg',
+            'E' => 'trial/3E.jpg',
+            'right_answer' => 'B',
         ]);
 
         DB::table('questions')->insert([
             'packet_id' => $packet_id,
             'number' => '4',
-            'question' => 'Soal pake gambar trus jawabannya pake gambar uga',
+            'question' => 'Dari gambar tersebut, berapa jawaban yang tepat?',
             'imgAnswer' => 1,
-            'img' => '4.png',
-            'A' => '4a.png',
-            'B' => '4b.png',
-            'C' => '4c.png',
-            'D' => '4d.png',
-            'E' => '4b.png',
+            'img' => 'trial/4.jpg',
+            'A' => 'trial/4A.jpg',
+            'B' => 'trial/4B.jpeg',
+            'C' => 'trial/4C.jpeg',
+            'D' => 'trial/4D.png',
+            'E' => 'trial/4E.png',
             'right_answer' => 'A',
         ]);
 
@@ -83,160 +86,12 @@ class SoalSeeder extends Seeder
             'packet_id' => $packet_id,
             'number' => '5',
             'question' =>
-            'Soal pake syntax html jadi bisa enter atau kuadrat.<br>
-            Contohnya H<sub>2</sub>O + 1200<sup>21</sup>. <br>
-            <strong>Tebel</strong> ama <small>Kecil</small> atau <strike>Coret</strike> <em>Italic</em>!',
-            'A' => 'Cakeb',
-            'B' => 'Mantab',
-            'C' => 'James',
-            'D' => 'Pocari',
-            'E' => 'Asep',
-            'right_answer' => 'B',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '6',
-            'question' => 'Soal tambah2 biar banyak. Ini soalnya diacak tiap peserta yak',
-            'imgAnswer' => 1,
-            'img' => '4.png',
-            'A' => '4a.png',
-            'B' => '4b.png',
-            'C' => '4c.png',
-            'D' => '4d.png',
-            'E' => '4.png',
-            'right_answer' => 'A',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '7',
-            'question' =>
-            'Soal lagi, jawabannya pake emoji wkwkwk.<br>
-            Pake emot ni ngab H<sub>2</sub>O + 1200<sup>21</sup>. <br>
-            <strong>Tebel</strong> ama <small>Kecil</small> atau <strike>Coret</strike> <em>Italic</em>!',
-            'img' => '4.png',
-            'A' => '✰⋆🌟✪🔯✨',
-            'B' => '💨🌬️',
-            'C' => '🌎🌎',
-            'D' => '⏳',
-            'E' => '⏳⏳⏳',
-            'right_answer' => 'C',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '8',
-            'question' =>
-            'Kalo ada kritik saran apapun nanti bisa ditulis abis akhiri soal yaa!',
-            'A' => 'Mlz',
-            'B' => 'Gamao',
-            'C' => 'Yes',
-            'D' => 'Ngga',
-            'E' => 'Ngga',
-            'right_answer' => 'C',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '9',
-            'question' =>
-            'Jangan lupa nanti habis akhiri soal buat ngisi kritik saran ngab!',
-            'A' => 'Ngga',
-            'B' => 'Oke',
-            'C' => 'Ngga',
-            'D' => 'Ngga',
-            'E' => 'Ngga',
-            'right_answer' => 'B',
-        ]);
-
-
-        $packet_id = DB::table('packets')->insertGetId([
-            'name' => 'Paket Soal B',
-            'detail' => 'Babak penyisihan akan diberikan soal dalam bentuk Multiple Choice Question (MCQ) dengan durasi pengerjaan 100 menit. Metode penilaian menggunakan sistem Item Response Theory (IRT).',
-            'question_count' => 4,
-            'open' => Carbon::now()->format('Y-m-d H:i:s'),
-            'close' => Carbon::now()->addHours(5)->format('Y-m-d H:i:s'),
-            'duration' => '5',
-            // dlm menit
-        ]);
-
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '1',
-            'question' => 'Makasi udh nyoba websitenya, bebas mau diisi bener apa gak. Jawabannya A',
-            'A' => 'Bombardir',
-            'B' => 'Nuklir',
-            'C' => 'Takbir',
-            'D' => 'Bombay',
-            'E' => 'Kambing',
-            'right_answer' => 'A',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '2',
-            'question' => 'Contoh soal yg pake gambar, nyaman nggak nih pakeknya',
-            'img' => '1.jpeg',
-            'A' => 'Rusa',
-            'B' => 'Singa',
-            'C' => 'Macan',
-            'D' => 'Kucing',
-            'E' => 'Burung',
-            'right_answer' => 'A',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '3',
-            'question' => 'Ini contoh soal yang pilgannya gambar. Nyaman nggak diliatnya??',
-            'imgAnswer' => 1,
-            'A' => '2A.jpg',
-            'B' => '2B.jpg',
-            'C' => '2C.jpg',
-            'D' => '2D.jpg',
-            'E' => '2A.jpg',
-            'right_answer' => 'C',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '4',
-            'question' => 'Soal pake gambar trus jawabannya pake gambar uga',
-            'imgAnswer' => 1,
-            'img' => '4.png',
-            'A' => '4a.png',
-            'B' => '4b.png',
-            'C' => '4c.png',
-            'D' => '4d.png',
-            'E' => '4b.png',
-            'right_answer' => 'A',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '5',
-            'question' =>
-            'Kalo ada kritik saran apapun nanti bisa ditulis abis akhiri soal yaa!',
-            'A' => 'Mlz',
-            'B' => 'Gamao',
-            'C' => 'Yes',
-            'D' => 'Ngga',
-            'E' => 'Ngga',
-            'right_answer' => 'C',
-        ]);
-
-        DB::table('questions')->insert([
-            'packet_id' => $packet_id,
-            'number' => '6',
-            'question' =>
-            'Jangan lupa nanti habis akhiri soal buat ngisi kritik saran ngab!',
-            'A' => 'Ngga',
-            'B' => 'Oke',
-            'C' => 'Ngga',
-            'D' => 'Ngga',
-            'E' => 'Ngga',
+            'Berapa hasil dari 1201<sup>21</sup> + 1200<sup>21</sup>? ',
+            'A' => 'Soal uji coba',
+            'B' => 'Ngga usah dihitung beneran',
+            'C' => 'Jangan lupa dipersiapkan ya!',
+            'D' => 'Semangat',
+            'E' => '<3',
             'right_answer' => 'B',
         ]);
     }

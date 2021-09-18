@@ -492,6 +492,18 @@
             <div class="sponsor-img">
                 <img src="{{ asset('img/landing-login-register/sponsor/RedDoorz.jpeg')}}" alt="RedDoorz">
             </div>
+            <div class="sponsor-img">
+                <img src="{{ asset('img/landing-login-register/sponsor/Pahamify.jpg')}}" alt="Pahamify">
+            </div>
+            <div class="sponsor-img">
+                <img src="{{ asset('img/landing-login-register/sponsor/Logo Codepolitan.png')}}" alt="CodePolitan">
+            </div>
+            <div class="sponsor-img">
+                <img src="{{ asset('img/landing-login-register/sponsor/cicil.png')}}" alt="Cicil">
+            </div>
+            <div class="sponsor-img">
+                <img src="{{ asset('img/landing-login-register/sponsor/bantex.png')}}" alt="Bantex">
+            </div>
         </div>
         {{-- MEDPART --}}
         <div class="title" style="margin-top: 2rem">
@@ -526,7 +538,7 @@
                 <img src="{{ asset('img/landing-login-register/mediapartner/BemFST.png')}}" alt="BEM FST">
             </div>
             <div class="medpart-img">
-                <img src="{{ asset('img/landing-login-register/mediapartner/infoolimpiade.png')}}" alt="Info Olimpiade">
+                <img src="{{ asset('img/landing-login-register/mediapartner/event_mahasiswa.png')}}" alt="Event Mahasiswa">
             </div>
             <div class="medpart-img">
                 <img src="{{ asset('img/landing-login-register/mediapartner/infoeventjatim.png')}}" alt="Info Event Jatim">
@@ -536,6 +548,21 @@
             </div>
             <div class="medpart-img">
                 <img src="{{ asset('img/landing-login-register/mediapartner/MathQnA.jpg')}}" alt="Math QnA">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/event_kampus.png')}}" alt="Event Kampus">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/infoolimpiade.png')}}" alt="Info Olimpiade">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/eventpelajar.png')}}" alt="Event Pelajar">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/info_event.png')}}" alt="Info Event">
+            </div>
+            <div class="medpart-img">
+                <img src="{{ asset('img/landing-login-register/mediapartner/kompetisi_mahasiswa.png')}}" alt="Kompetisi Mahasiswa">
             </div>
         </div>
         <div class="bintang">

@@ -1,4 +1,7 @@
 <script>
+    function convertTZ(date, tzString) {
+        return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
+    }
     function countDown(el) {
 
     // Set the date we're counting down to
@@ -9,7 +12,8 @@
     // Update the count down every 1 second
     var x = setInterval(function StartCount() {
         // Get today's date and time
-        var now = new Date().getTime();
+        var time = new Date();
+        var now = convertTZ(time, "Asia/Jakarta").getTime();
 
         // Find the distance between now and the count down date
         var distance = countDownDate - now;

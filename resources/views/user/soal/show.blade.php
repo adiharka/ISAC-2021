@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="{{ asset('css/env.css') }}">
     <link rel="stylesheet" href="{{ asset('css/soal/show-question.css') }}">
 
+    <style>
+        dl, ol, ul {
+            padding: revert;
+            margin-bottom: revert !important;
+        }
+        #answer h4 {
+            text-align: left;
+        }
+    </style>
+
     <!-- ICON -->
     <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}" />
 
@@ -300,7 +310,11 @@
             <p>If you find any problems, contact us : <br><br>
                 <strong>Sulthan</strong><br>
                 Whatsapp : +628119381391 <br>
-                Line : sultanfbtr245<br>
+                Line : sultanfbtr245<br><br>
+                <strong>Oxy</strong><br>
+                Whatsapp : +6285335995105 <br>
+                Line : Oxysh_<br>
+            </p>
         </div>
     </div>
 

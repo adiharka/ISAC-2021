@@ -17,7 +17,7 @@ class CreatePacketsTable extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('visible')->default(0);
-            $table->string('detail')->nullable();
+            $table->string('detail', 724)->nullable();
             $table->tinyInteger('question_count')->nullable();
             $table->dateTime('open')->nullable();
             $table->dateTime('close')->nullable();

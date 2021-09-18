@@ -32,7 +32,7 @@ rel="stylesheet">
                 </div>
             @endif
             <h2 class="judul">{{ $packet->name }}</h2>
-            <p class="keterangan">{{ $packet->detail }}</p>
+            <p class="keterangan">{!! $packet->detail !!}</p>
             <div class="buttons1">
                 @if ($status == "open")
                 <a href="{{ route('user.soal.take', $id) }}" class="btn-enter">Mulai

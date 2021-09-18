@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             SoalSeeder::class,
+            SoalSeederNew::class,
         ]);
-        \App\Models\User::factory(200)->create();
+        // \App\Models\User::factory(200)->create();
     }
 }
