@@ -270,7 +270,7 @@ class SoalSeederNew extends Seeder
             'number' => '18',
             'question' =>
             'Perhatikan kalimat berikut:<br>
-            &emsp “Ada idola yang digemari oleh semua orang.”<br>
+            <ul><li>“Ada idola yang digemari oleh semua orang.”</li></ul>
             Terjemahan kalimat di atas dengan menggunakan kuantor adalah …',
             'A' => '(∀x)( Ǝy)F(x,y)',
             'B' => '(∀x)~(y)( Ǝz)F(x,y,z)',
@@ -284,7 +284,7 @@ class SoalSeederNew extends Seeder
             'number' => '19',
             'question' =>
             'Perhatikan kalimat berikut:<br>
-            &emsp “Tidak semua lulusan kuliah memiliki pekerjaan.”<br>
+            <ul><li>“Tidak semua lulusan kuliah memiliki pekerjaan.”</li></ul>
             Terjemahan kalimat di atas dengan menggunakan kuantor adalah …',
             'A' => '((∀x)F(x))',
             'B' => '~((∀x)F(x))',
@@ -312,7 +312,7 @@ class SoalSeederNew extends Seeder
             'number' => '21',
             'question' =>
             'Mikey menemukan suatu kertas, karena terburu-buru dia terjatuh dan pandangannya menjadi kabur. Isi kertas tersebut :<br>
-            <ul><li>&emsp KEKW
+            <ul><li>KEKW
             </li></ul>
             Setelah Mikey berputar-putar, dia akhirnya bisa membaca teks tersebut. Apakah arti teks tersebut?',
             'A' => 'LULS',
@@ -327,7 +327,7 @@ class SoalSeederNew extends Seeder
             'number' => '22',
             'question' =>
             'Kamu sedang memecahkan Teka-Teki berikut :<br>
-            &emsp OMEGALUL<br>
+            <ul><li>OMEGALUL</li></ul>
             Pada Teka-teki ini terdapat keterangan :<br>
             Kurangkan mereka dengan yang paling akhir, kemudian jumlahkan<br>
             Apakah jawaban dari Teka-Teki tersebut?',

@@ -79,17 +79,17 @@ class AdminSoalController extends Controller
                 $percentage = 1;
             }
             switch (true) {
-                case $percentage >= 0.55:
-                    $question->point = 1;
+                case $percentage > 0.75:
+                    $question->point = 5;
                     break;
-                case $percentage >= 0.35:
-                    $question->point = 2;
+                case $percentage > 0.5:
+                    $question->point = 10;
                     break;
-                case $percentage >= 0.2:
-                    $question->point = 3;
+                case $percentage > 0.25:
+                    $question->point = 15;
                     break;
                 default:
-                    $question->point = 4;
+                    $question->point = 20;
             }
             $question->save();
         }
